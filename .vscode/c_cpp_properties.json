@@ -1,0 +1,57 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/Applications/microchip/xc8/v2.31/pic/include",
+                "/Applications/microchip/xc8/v2.31/pic/include/legacy/**",
+                "/Applications/microchip/xc8/v2.31/pic/include/proc",
+                "/Applications/microchip/xc8/v2.31/pic/include/C99"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/Applications/microchip/xc8/v2.31/bin/xc8-cc",
+            "cStandard": "c99",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "compilerArgs": [
+                "-mcpu=16f18344",
+                "-std=c99",
+                "-gdwarf-3",
+                "-mstack=compiled:auto:auto",
+                "-xassembler-with-cpp",
+                "-mwarn=-3",
+                "-mext=cci",
+                "-Wa,-a",
+                "-O0",
+                "-fasmfile",
+                "-maddrqual=ignore",
+                "-fno-short-double",
+                "-fno-short-float",
+                "-DXPRJ_default=default",
+                "-msummary=-psect,-class,+mem,-hex,-file",
+                "-ginhx032",
+                "-Wl,--data-init",
+                "-mno-keep-startup",
+                "-mno-osccal",
+                "-mno-resetbits",
+                "-mno-save-resetbits",
+                "-mno-download",
+                "-mno-stackcall"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "forcedInclude": [
+                "/Applications/microchip/xc8/v2.31/pic/include/proc/pic16f18344.h"
+            ]
+        }
+    ],
+    "version": 4
+}

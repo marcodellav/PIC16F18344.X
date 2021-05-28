@@ -1,0 +1,1835 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+"69 /Users/marcodellav/MPLABXProjects/PIC16F18344.X/mcc_generated_files/mcc.h
+[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"4023 /Applications/microchip/xc8/v2.31/pic/include/proc/pic16f18344.h
+[v _WPUA `Vuc ~T0 @X0 0 e@524 ]
+"1640
+[v _TRISA `Vuc ~T0 @X0 0 e@140 ]
+"385
+[v _PORTA `Vuc ~T0 @X0 0 e@12 ]
+"1685
+[v _TRISB `Vuc ~T0 @X0 0 e@141 ]
+"435
+[v _PORTB `Vuc ~T0 @X0 0 e@13 ]
+"1724
+[v _TRISC `Vuc ~T0 @X0 0 e@142 ]
+"474
+[v _PORTC `Vuc ~T0 @X0 0 e@14 ]
+"2162
+[v _ADCON0 `Vuc ~T0 @X0 0 e@157 ]
+"2248
+[v _ADCON1 `Vuc ~T0 @X0 0 e@158 ]
+"88 /Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+[v _spi_init `(v ~T0 @X0 0 ef ]
+"441 /Applications/microchip/xc8/v2.31/pic/include/proc/pic16f18344.h
+[s S35 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S35 . . RB4 RB5 RB6 RB7 ]
+"440
+[u S34 `S35 1 ]
+[n S34 . . ]
+"449
+[v _PORTBbits `VS34 ~T0 @X0 0 e@13 ]
+"1691
+[s S90 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S90 . . TRISB4 TRISB5 TRISB6 TRISB7 ]
+"1690
+[u S89 `S90 1 ]
+[n S89 . . ]
+"1699
+[v _TRISBbits `VS89 ~T0 @X0 0 e@141 ]
+"1569
+[v _T2CON `Vuc ~T0 @X0 0 e@31 ]
+"87 /Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+[v _load_dac `(v ~T0 @X0 0 ef2`uc`ui ]
+"2168 /Applications/microchip/xc8/v2.31/pic/include/proc/pic16f18344.h
+[s S111 :1 `uc 1 :1 `uc 1 :6 `uc 1 ]
+[n S111 . ADON GO_nDONE CHS ]
+"2173
+[s S112 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S112 . . ADGO CHS0 CHS1 CHS2 CHS3 CHS4 CHS5 ]
+"2183
+[s S113 :1 `uc 1 :1 `uc 1 ]
+[n S113 . . GO ]
+"2167
+[u S110 `S111 1 `S112 1 `S113 1 ]
+[n S110 . . . . ]
+"2188
+[v _ADCON0bits `VS110 ~T0 @X0 0 e@157 ]
+"352
+[v _INTCON `Vuc ~T0 @X0 0 e@11 ]
+"358
+[s S31 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . INTEDG . PEIE GIE ]
+"357
+[u S30 `S31 1 ]
+[n S30 . . ]
+"365
+[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
+"1825
+[s S96 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S96 . TMR1IE TMR2IE BCL1IE SSP1IE TXIE RCIE ADIE TMR1GIE ]
+"1824
+[u S95 `S96 1 ]
+[n S95 . . ]
+"1836
+[v _PIE1bits `VS95 ~T0 @X0 0 e@145 ]
+"5140
+[s S249 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S249 . SSPM CKP SSPEN SSPOV WCOL ]
+"5147
+[s S250 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S250 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"5139
+[u S248 `S249 1 `S250 1 ]
+[n S248 . . . ]
+"5154
+[v _SSPCONbits `VS248 ~T0 @X0 0 e@533 ]
+"2142
+[v _ADRESH `Vuc ~T0 @X0 0 e@156 ]
+[v F183 `(v ~T0 @X0 1 tf1`ul ]
+"12 /Applications/microchip/xc8/v2.31/pic/include/builtins.h
+[v __delay `JF183 ~T0 @X0 0 e ]
+[p i __delay ]
+"91 /Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+[v _time_lookup `(ui ~T0 @X0 0 ef1`uc ]
+"89
+[v _reset_envelope `(v ~T0 @X0 0 ef1`uc ]
+"480 /Applications/microchip/xc8/v2.31/pic/include/proc/pic16f18344.h
+[s S37 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S37 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"479
+[u S36 `S37 1 ]
+[n S36 . . ]
+"491
+[v _PORTCbits `VS36 ~T0 @X0 0 e@14 ]
+"391
+[s S33 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S33 . RA0 RA1 RA2 RA3 RA4 RA5 ]
+"390
+[u S32 `S33 1 ]
+[n S32 . . ]
+"400
+[v _PORTAbits `VS32 ~T0 @X0 0 e@12 ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"575
+[s S41 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S41 . TMR1IF TMR2IF BCL1IF SSP1IF TXIF RCIF ADIF TMR1GIF ]
+"574
+[u S40 `S41 1 ]
+[n S40 . . ]
+"586
+[v _PIR1bits `VS40 ~T0 @X0 0 e@17 ]
+"90 /Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+[v _envelope_control `(v ~T0 @X0 0 ef2`uc`uc ]
+"1730 /Applications/microchip/xc8/v2.31/pic/include/proc/pic16f18344.h
+[s S92 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S92 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1729
+[u S91 `S92 1 ]
+[n S91 . . ]
+"1741
+[v _TRISCbits `VS91 ~T0 @X0 0 e@142 ]
+"5002
+[s S244 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S244 . BF UA R_nW S P D_nA CKE SMP ]
+"5001
+[u S243 `S244 1 ]
+[n S243 . . ]
+"5013
+[v _SSPSTATbits `VS243 ~T0 @X0 0 e@532 ]
+"4174
+[v _SSP1BUF `Vuc ~T0 @X0 0 e@529 ]
+"92 /Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+[v _flash_read `(ui ~T0 @X0 0 ef1`ui ]
+"10446 /Applications/microchip/xc8/v2.31/pic/include/proc/pic16f18344.h
+[v _EEADRH `Vuc ~T0 @X0 0 e@2194 ]
+"10178
+[v _EEADR `Vus ~T0 @X0 0 e@2193 ]
+"11174
+[s S563 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S563 . RD WR WREN WRERR FREE LWLO NVMREGS ]
+"11183
+[s S564 :6 `uc 1 :1 `uc 1 ]
+[n S564 . . CFGS ]
+"11173
+[u S562 `S563 1 `S564 1 ]
+[n S562 . . . ]
+"11188
+[v _NVMCON1bits `VS562 ~T0 @X0 0 e@2197 ]
+"10680
+[v _EEDAT `Vus ~T0 @X0 0 e@2195 ]
+"55 /Applications/microchip/xc8/v2.31/pic/include/proc/pic16f18344.h
+[; <" INDF0 equ 00h ;# ">
+"75
+[; <" INDF1 equ 01h ;# ">
+"95
+[; <" PCL equ 02h ;# ">
+"115
+[; <" STATUS equ 03h ;# ">
+"178
+[; <" FSR0L equ 04h ;# ">
+"198
+[; <" FSR0H equ 05h ;# ">
+"222
+[; <" FSR1L equ 06h ;# ">
+"242
+[; <" FSR1H equ 07h ;# ">
+"262
+[; <" BSR equ 08h ;# ">
+"314
+[; <" WREG equ 09h ;# ">
+"334
+[; <" PCLATH equ 0Ah ;# ">
+"354
+[; <" INTCON equ 0Bh ;# ">
+"387
+[; <" PORTA equ 0Ch ;# ">
+"437
+[; <" PORTB equ 0Dh ;# ">
+"476
+[; <" PORTC equ 0Eh ;# ">
+"538
+[; <" PIR0 equ 010h ;# ">
+"571
+[; <" PIR1 equ 011h ;# ">
+"633
+[; <" PIR2 equ 012h ;# ">
+"684
+[; <" PIR3 equ 013h ;# ">
+"746
+[; <" PIR4 equ 014h ;# ">
+"808
+[; <" TMR0L equ 015h ;# ">
+"813
+[; <" TMR0 equ 015h ;# ">
+"946
+[; <" TMR0H equ 016h ;# ">
+"951
+[; <" PR0 equ 016h ;# ">
+"1200
+[; <" T0CON0 equ 017h ;# ">
+"1265
+[; <" T0CON1 equ 018h ;# ">
+"1342
+[; <" TMR1 equ 019h ;# ">
+"1349
+[; <" TMR1L equ 019h ;# ">
+"1369
+[; <" TMR1H equ 01Ah ;# ">
+"1389
+[; <" T1CON equ 01Bh ;# ">
+"1461
+[; <" T1GCON equ 01Ch ;# ">
+"1531
+[; <" TMR2 equ 01Dh ;# ">
+"1551
+[; <" PR2 equ 01Eh ;# ">
+"1571
+[; <" T2CON equ 01Fh ;# ">
+"1642
+[; <" TRISA equ 08Ch ;# ">
+"1687
+[; <" TRISB equ 08Dh ;# ">
+"1726
+[; <" TRISC equ 08Eh ;# ">
+"1788
+[; <" PIE0 equ 090h ;# ">
+"1821
+[; <" PIE1 equ 091h ;# ">
+"1883
+[; <" PIE2 equ 092h ;# ">
+"1934
+[; <" PIE3 equ 093h ;# ">
+"1996
+[; <" PIE4 equ 094h ;# ">
+"2058
+[; <" WDTCON equ 097h ;# ">
+"2117
+[; <" ADRES equ 09Bh ;# ">
+"2124
+[; <" ADRESL equ 09Bh ;# ">
+"2144
+[; <" ADRESH equ 09Ch ;# ">
+"2164
+[; <" ADCON0 equ 09Dh ;# ">
+"2250
+[; <" ADCON1 equ 09Eh ;# ">
+"2322
+[; <" ADACT equ 09Fh ;# ">
+"2374
+[; <" LATA equ 010Ch ;# ">
+"2419
+[; <" LATB equ 010Dh ;# ">
+"2458
+[; <" LATC equ 010Eh ;# ">
+"2520
+[; <" CM1CON0 equ 0111h ;# ">
+"2572
+[; <" CM1CON1 equ 0112h ;# ">
+"2648
+[; <" CM2CON0 equ 0113h ;# ">
+"2700
+[; <" CM2CON1 equ 0114h ;# ">
+"2776
+[; <" CMOUT equ 0115h ;# ">
+"2802
+[; <" BORCON equ 0116h ;# ">
+"2829
+[; <" FVRCON equ 0117h ;# ">
+"2905
+[; <" DACCON0 equ 0118h ;# ">
+"2961
+[; <" DACCON1 equ 0119h ;# ">
+"3013
+[; <" ANSELA equ 018Ch ;# ">
+"3058
+[; <" ANSELB equ 018Dh ;# ">
+"3097
+[; <" ANSELC equ 018Eh ;# ">
+"3159
+[; <" VREGCON equ 0197h ;# ">
+"3180
+[; <" RC1REG equ 0199h ;# ">
+"3185
+[; <" RCREG equ 0199h ;# ">
+"3189
+[; <" RCREG1 equ 0199h ;# ">
+"3234
+[; <" TX1REG equ 019Ah ;# ">
+"3239
+[; <" TXREG1 equ 019Ah ;# ">
+"3243
+[; <" TXREG equ 019Ah ;# ">
+"3288
+[; <" SP1BRG equ 019Bh ;# ">
+"3295
+[; <" SP1BRGL equ 019Bh ;# ">
+"3300
+[; <" SPBRG equ 019Bh ;# ">
+"3304
+[; <" SPBRG1 equ 019Bh ;# ">
+"3308
+[; <" SPBRGL equ 019Bh ;# ">
+"3365
+[; <" SP1BRGH equ 019Ch ;# ">
+"3370
+[; <" SPBRGH equ 019Ch ;# ">
+"3374
+[; <" SPBRGH1 equ 019Ch ;# ">
+"3419
+[; <" RC1STA equ 019Dh ;# ">
+"3424
+[; <" RCSTA1 equ 019Dh ;# ">
+"3428
+[; <" RCSTA equ 019Dh ;# ">
+"3599
+[; <" TX1STA equ 019Eh ;# ">
+"3604
+[; <" TXSTA1 equ 019Eh ;# ">
+"3608
+[; <" TXSTA equ 019Eh ;# ">
+"3779
+[; <" BAUD1CON equ 019Fh ;# ">
+"3784
+[; <" BAUDCON1 equ 019Fh ;# ">
+"3788
+[; <" BAUDCTL1 equ 019Fh ;# ">
+"3792
+[; <" BAUDCON equ 019Fh ;# ">
+"3796
+[; <" BAUDCTL equ 019Fh ;# ">
+"4025
+[; <" WPUA equ 020Ch ;# ">
+"4075
+[; <" WPUB equ 020Dh ;# ">
+"4114
+[; <" WPUC equ 020Eh ;# ">
+"4176
+[; <" SSP1BUF equ 0211h ;# ">
+"4181
+[; <" SSPBUF equ 0211h ;# ">
+"4430
+[; <" SSP1ADD equ 0212h ;# ">
+"4435
+[; <" SSPADD equ 0212h ;# ">
+"4684
+[; <" SSP1MSK equ 0213h ;# ">
+"4689
+[; <" SSPMSK equ 0213h ;# ">
+"4938
+[; <" SSP1STAT equ 0214h ;# ">
+"4943
+[; <" SSPSTAT equ 0214h ;# ">
+"5060
+[; <" SSP1CON1 equ 0215h ;# ">
+"5065
+[; <" SSPCON equ 0215h ;# ">
+"5069
+[; <" SSPCON1 equ 0215h ;# ">
+"5073
+[; <" SSP1CON equ 0215h ;# ">
+"5330
+[; <" SSP1CON2 equ 0216h ;# ">
+"5335
+[; <" SSPCON2 equ 0216h ;# ">
+"5452
+[; <" SSP1CON3 equ 0217h ;# ">
+"5457
+[; <" SSPCON3 equ 0217h ;# ">
+"5574
+[; <" ODCONA equ 028Ch ;# ">
+"5619
+[; <" ODCONB equ 028Dh ;# ">
+"5658
+[; <" ODCONC equ 028Eh ;# ">
+"5720
+[; <" CCPR1 equ 0291h ;# ">
+"5727
+[; <" CCPR1L equ 0291h ;# ">
+"5747
+[; <" CCPR1H equ 0292h ;# ">
+"5767
+[; <" CCP1CON equ 0293h ;# ">
+"5832
+[; <" CCP1CAP equ 0294h ;# ">
+"5878
+[; <" CCPR2 equ 0295h ;# ">
+"5885
+[; <" CCPR2L equ 0295h ;# ">
+"5905
+[; <" CCPR2H equ 0296h ;# ">
+"5925
+[; <" CCP2CON equ 0297h ;# ">
+"5990
+[; <" CCP2CAP equ 0298h ;# ">
+"6036
+[; <" CCPTMRS equ 029Fh ;# ">
+"6124
+[; <" SLRCONA equ 030Ch ;# ">
+"6169
+[; <" SLRCONB equ 030Dh ;# ">
+"6208
+[; <" SLRCONC equ 030Eh ;# ">
+"6270
+[; <" CCPR3 equ 0311h ;# ">
+"6277
+[; <" CCPR3L equ 0311h ;# ">
+"6297
+[; <" CCPR3H equ 0312h ;# ">
+"6317
+[; <" CCP3CON equ 0313h ;# ">
+"6382
+[; <" CCP3CAP equ 0314h ;# ">
+"6428
+[; <" CCPR4 equ 0315h ;# ">
+"6435
+[; <" CCPR4L equ 0315h ;# ">
+"6455
+[; <" CCPR4H equ 0316h ;# ">
+"6475
+[; <" CCP4CON equ 0317h ;# ">
+"6540
+[; <" CCP4CAP equ 0318h ;# ">
+"6586
+[; <" INLVLA equ 038Ch ;# ">
+"6636
+[; <" INLVLB equ 038Dh ;# ">
+"6675
+[; <" INLVLC equ 038Eh ;# ">
+"6737
+[; <" IOCAP equ 0391h ;# ">
+"6787
+[; <" IOCAN equ 0392h ;# ">
+"6837
+[; <" IOCAF equ 0393h ;# ">
+"6887
+[; <" IOCBP equ 0394h ;# ">
+"6926
+[; <" IOCBN equ 0395h ;# ">
+"6965
+[; <" IOCBF equ 0396h ;# ">
+"7004
+[; <" IOCCP equ 0397h ;# ">
+"7066
+[; <" IOCCN equ 0398h ;# ">
+"7128
+[; <" IOCCF equ 0399h ;# ">
+"7190
+[; <" CLKRCON equ 039Ah ;# ">
+"7255
+[; <" MDCON equ 039Ch ;# ">
+"7295
+[; <" MDSRC equ 039Dh ;# ">
+"7341
+[; <" MDCARH equ 039Eh ;# ">
+"7400
+[; <" MDCARL equ 039Fh ;# ">
+"7459
+[; <" TMR3 equ 0411h ;# ">
+"7466
+[; <" TMR3L equ 0411h ;# ">
+"7486
+[; <" TMR3H equ 0412h ;# ">
+"7506
+[; <" T3CON equ 0413h ;# ">
+"7578
+[; <" T3GCON equ 0414h ;# ">
+"7648
+[; <" TMR4 equ 0415h ;# ">
+"7668
+[; <" PR4 equ 0416h ;# ">
+"7688
+[; <" T4CON equ 0417h ;# ">
+"7759
+[; <" TMR5 equ 0418h ;# ">
+"7766
+[; <" TMR5L equ 0418h ;# ">
+"7786
+[; <" TMR5H equ 0419h ;# ">
+"7806
+[; <" T5CON equ 041Ah ;# ">
+"7878
+[; <" T5GCON equ 041Bh ;# ">
+"7948
+[; <" TMR6 equ 041Ch ;# ">
+"7968
+[; <" PR6 equ 041Dh ;# ">
+"7988
+[; <" T6CON equ 041Eh ;# ">
+"8059
+[; <" CCDCON equ 041Fh ;# ">
+"8102
+[; <" NCO1ACC equ 0498h ;# ">
+"8109
+[; <" NCO1ACCL equ 0498h ;# ">
+"8129
+[; <" NCO1ACCH equ 0499h ;# ">
+"8149
+[; <" NCO1ACCU equ 049Ah ;# ">
+"8171
+[; <" NCO1INC equ 049Bh ;# ">
+"8178
+[; <" NCO1INCL equ 049Bh ;# ">
+"8198
+[; <" NCO1INCH equ 049Ch ;# ">
+"8218
+[; <" NCO1INCU equ 049Dh ;# ">
+"8238
+[; <" NCO1CON equ 049Eh ;# ">
+"8278
+[; <" NCO1CLK equ 049Fh ;# ">
+"8305
+[; <" PWM5DCL equ 0617h ;# ">
+"8341
+[; <" PWM5DCH equ 0618h ;# ">
+"8411
+[; <" PWM5CON equ 0619h ;# ">
+"8416
+[; <" PWM5CON0 equ 0619h ;# ">
+"8477
+[; <" PWM6DCL equ 061Ah ;# ">
+"8513
+[; <" PWM6DCH equ 061Bh ;# ">
+"8583
+[; <" PWM6CON equ 061Ch ;# ">
+"8588
+[; <" PWM6CON0 equ 061Ch ;# ">
+"8649
+[; <" PWMTMRS equ 061Fh ;# ">
+"8701
+[; <" CWG1CLKCON equ 0691h ;# ">
+"8729
+[; <" CWG1DAT equ 0692h ;# ">
+"8775
+[; <" CWG1DBR equ 0693h ;# ">
+"8879
+[; <" CWG1DBF equ 0694h ;# ">
+"8983
+[; <" CWG1CON0 equ 0695h ;# ">
+"9084
+[; <" CWG1CON1 equ 0696h ;# ">
+"9162
+[; <" CWG1AS0 equ 0697h ;# ">
+"9282
+[; <" CWG1AS1 equ 0698h ;# ">
+"9326
+[; <" CWG1STR equ 0699h ;# ">
+"9438
+[; <" CWG2CLKCON equ 0711h ;# ">
+"9466
+[; <" CWG2DAT equ 0712h ;# ">
+"9512
+[; <" CWG2DBR equ 0713h ;# ">
+"9616
+[; <" CWG2DBF equ 0714h ;# ">
+"9720
+[; <" CWG2CON0 equ 0715h ;# ">
+"9821
+[; <" CWG2CON1 equ 0716h ;# ">
+"9899
+[; <" CWG2AS0 equ 0717h ;# ">
+"10019
+[; <" CWG2AS1 equ 0718h ;# ">
+"10063
+[; <" CWG2STR equ 0719h ;# ">
+"10175
+[; <" NVMADR equ 0891h ;# ">
+"10180
+[; <" EEADR equ 0891h ;# ">
+"10184
+[; <" PMADR equ 0891h ;# ">
+"10191
+[; <" NVMADRL equ 0891h ;# ">
+"10196
+[; <" EEADRL equ 0891h ;# ">
+"10200
+[; <" PMADRL equ 0891h ;# ">
+"10443
+[; <" NVMADRH equ 0892h ;# ">
+"10448
+[; <" EEADRH equ 0892h ;# ">
+"10452
+[; <" PMADRH equ 0892h ;# ">
+"10677
+[; <" NVMDAT equ 0893h ;# ">
+"10682
+[; <" EEDAT equ 0893h ;# ">
+"10686
+[; <" PMDAT equ 0893h ;# ">
+"10693
+[; <" NVMDATL equ 0893h ;# ">
+"10698
+[; <" EEDATL equ 0893h ;# ">
+"10702
+[; <" PMDATL equ 0893h ;# ">
+"10945
+[; <" NVMDATH equ 0894h ;# ">
+"10950
+[; <" EEDATH equ 0894h ;# ">
+"10954
+[; <" PMDATH equ 0894h ;# ">
+"11161
+[; <" NVMCON1 equ 0895h ;# ">
+"11166
+[; <" EECON1 equ 0895h ;# ">
+"11170
+[; <" PMCON1 equ 0895h ;# ">
+"11350
+[; <" NVMCON2 equ 0896h ;# ">
+"11355
+[; <" EECON2 equ 0896h ;# ">
+"11359
+[; <" PMCON2 equ 0896h ;# ">
+"11452
+[; <" PCON0 equ 089Bh ;# ">
+"11509
+[; <" PMD0 equ 0911h ;# ">
+"11554
+[; <" PMD1 equ 0912h ;# ">
+"11616
+[; <" PMD2 equ 0913h ;# ">
+"11656
+[; <" PMD3 equ 0914h ;# ">
+"11718
+[; <" PMD4 equ 0915h ;# ">
+"11746
+[; <" PMD5 equ 0916h ;# ">
+"11790
+[; <" CPUDOZE equ 0918h ;# ">
+"11855
+[; <" OSCCON1 equ 0919h ;# ">
+"11925
+[; <" OSCCON2 equ 091Ah ;# ">
+"11995
+[; <" OSCCON3 equ 091Bh ;# ">
+"12040
+[; <" OSCSTAT1 equ 091Ch ;# ">
+"12092
+[; <" OSCEN equ 091Dh ;# ">
+"12138
+[; <" OSCTUNE equ 091Eh ;# ">
+"12196
+[; <" OSCFRQ equ 091Fh ;# ">
+"12242
+[; <" PPSLOCK equ 0E0Fh ;# ">
+"12262
+[; <" INTPPS equ 0E10h ;# ">
+"12314
+[; <" T0CKIPPS equ 0E11h ;# ">
+"12366
+[; <" T1CKIPPS equ 0E12h ;# ">
+"12418
+[; <" T1GPPS equ 0E13h ;# ">
+"12470
+[; <" CCP1PPS equ 0E14h ;# ">
+"12522
+[; <" CCP2PPS equ 0E15h ;# ">
+"12574
+[; <" CCP3PPS equ 0E16h ;# ">
+"12626
+[; <" CCP4PPS equ 0E17h ;# ">
+"12678
+[; <" CWG1PPS equ 0E18h ;# ">
+"12730
+[; <" CWG2PPS equ 0E19h ;# ">
+"12782
+[; <" MDCIN1PPS equ 0E1Ah ;# ">
+"12834
+[; <" MDCIN2PPS equ 0E1Bh ;# ">
+"12886
+[; <" MDMINPPS equ 0E1Ch ;# ">
+"12938
+[; <" SSP1CLKPPS equ 0E20h ;# ">
+"12990
+[; <" SSP1DATPPS equ 0E21h ;# ">
+"13042
+[; <" SSP1SSPPS equ 0E22h ;# ">
+"13094
+[; <" RXPPS equ 0E24h ;# ">
+"13146
+[; <" TXPPS equ 0E25h ;# ">
+"13198
+[; <" CLCIN0PPS equ 0E28h ;# ">
+"13250
+[; <" CLCIN1PPS equ 0E29h ;# ">
+"13302
+[; <" CLCIN2PPS equ 0E2Ah ;# ">
+"13354
+[; <" CLCIN3PPS equ 0E2Bh ;# ">
+"13406
+[; <" T3CKIPPS equ 0E2Ch ;# ">
+"13426
+[; <" T3GPPS equ 0E2Dh ;# ">
+"13446
+[; <" T5CKIPPS equ 0E2Eh ;# ">
+"13466
+[; <" T5GPPS equ 0E2Fh ;# ">
+"13486
+[; <" RA0PPS equ 0E90h ;# ">
+"13538
+[; <" RA1PPS equ 0E91h ;# ">
+"13590
+[; <" RA2PPS equ 0E92h ;# ">
+"13642
+[; <" RA4PPS equ 0E94h ;# ">
+"13694
+[; <" RA5PPS equ 0E95h ;# ">
+"13746
+[; <" RB4PPS equ 0E9Ch ;# ">
+"13798
+[; <" RB5PPS equ 0E9Dh ;# ">
+"13850
+[; <" RB6PPS equ 0E9Eh ;# ">
+"13902
+[; <" RB7PPS equ 0E9Fh ;# ">
+"13954
+[; <" RC0PPS equ 0EA0h ;# ">
+"14006
+[; <" RC1PPS equ 0EA1h ;# ">
+"14058
+[; <" RC2PPS equ 0EA2h ;# ">
+"14110
+[; <" RC3PPS equ 0EA3h ;# ">
+"14162
+[; <" RC4PPS equ 0EA4h ;# ">
+"14214
+[; <" RC5PPS equ 0EA5h ;# ">
+"14266
+[; <" RC6PPS equ 0EA6h ;# ">
+"14318
+[; <" RC7PPS equ 0EA7h ;# ">
+"14370
+[; <" CLCDATA equ 0F0Fh ;# ">
+"14408
+[; <" CLC1CON equ 0F10h ;# ">
+"14526
+[; <" CLC1POL equ 0F11h ;# ">
+"14604
+[; <" CLC1SEL0 equ 0F12h ;# ">
+"14708
+[; <" CLC1SEL1 equ 0F13h ;# ">
+"14812
+[; <" CLC1SEL2 equ 0F14h ;# ">
+"14916
+[; <" CLC1SEL3 equ 0F15h ;# ">
+"15020
+[; <" CLC1GLS0 equ 0F16h ;# ">
+"15132
+[; <" CLC1GLS1 equ 0F17h ;# ">
+"15244
+[; <" CLC1GLS2 equ 0F18h ;# ">
+"15356
+[; <" CLC1GLS3 equ 0F19h ;# ">
+"15468
+[; <" CLC2CON equ 0F1Ah ;# ">
+"15586
+[; <" CLC2POL equ 0F1Bh ;# ">
+"15664
+[; <" CLC2SEL0 equ 0F1Ch ;# ">
+"15768
+[; <" CLC2SEL1 equ 0F1Dh ;# ">
+"15872
+[; <" CLC2SEL2 equ 0F1Eh ;# ">
+"15976
+[; <" CLC2SEL3 equ 0F1Fh ;# ">
+"16080
+[; <" CLC2GLS0 equ 0F20h ;# ">
+"16192
+[; <" CLC2GLS1 equ 0F21h ;# ">
+"16304
+[; <" CLC2GLS2 equ 0F22h ;# ">
+"16416
+[; <" CLC2GLS3 equ 0F23h ;# ">
+"16528
+[; <" CLC3CON equ 0F24h ;# ">
+"16646
+[; <" CLC3POL equ 0F25h ;# ">
+"16724
+[; <" CLC3SEL0 equ 0F26h ;# ">
+"16828
+[; <" CLC3SEL1 equ 0F27h ;# ">
+"16932
+[; <" CLC3SEL2 equ 0F28h ;# ">
+"17036
+[; <" CLC3SEL3 equ 0F29h ;# ">
+"17140
+[; <" CLC3GLS0 equ 0F2Ah ;# ">
+"17252
+[; <" CLC3GLS1 equ 0F2Bh ;# ">
+"17364
+[; <" CLC3GLS2 equ 0F2Ch ;# ">
+"17476
+[; <" CLC3GLS3 equ 0F2Dh ;# ">
+"17588
+[; <" CLC4CON equ 0F2Eh ;# ">
+"17706
+[; <" CLC4POL equ 0F2Fh ;# ">
+"17784
+[; <" CLC4SEL0 equ 0F30h ;# ">
+"17888
+[; <" CLC4SEL1 equ 0F31h ;# ">
+"17992
+[; <" CLC4SEL2 equ 0F32h ;# ">
+"18096
+[; <" CLC4SEL3 equ 0F33h ;# ">
+"18200
+[; <" CLC4GLS0 equ 0F34h ;# ">
+"18312
+[; <" CLC4GLS1 equ 0F35h ;# ">
+"18424
+[; <" CLC4GLS2 equ 0F36h ;# ">
+"18536
+[; <" CLC4GLS3 equ 0F37h ;# ">
+"18648
+[; <" STATUS_SHAD equ 0FE4h ;# ">
+"18680
+[; <" WREG_SHAD equ 0FE5h ;# ">
+"18700
+[; <" BSR_SHAD equ 0FE6h ;# ">
+"18720
+[; <" PCLATH_SHAD equ 0FE7h ;# ">
+"18740
+[; <" FSR0L_SHAD equ 0FE8h ;# ">
+"18760
+[; <" FSR0H_SHAD equ 0FE9h ;# ">
+"18780
+[; <" FSR1L_SHAD equ 0FEAh ;# ">
+"18800
+[; <" FSR1H_SHAD equ 0FEBh ;# ">
+"18820
+[; <" STKPTR equ 0FEDh ;# ">
+"18840
+[; <" TOSL equ 0FEEh ;# ">
+"18860
+[; <" TOSH equ 0FEFh ;# ">
+"26 /Users/marcodellav/MPLABXProjects/PIC16F18344.X/time_map.h
+[v _time00 `Cuc ~T0 @X0 -> 16 `i e@2048 ]
+[i _time00
+:U ..
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 220 `i `uc
+-> -> 234 `i `uc
+-> -> 119 `i `uc
+-> -> 215 `i `uc
+-> -> 173 `i `uc
+-> -> 197 `i `uc
+-> -> 91 `i `uc
+-> -> 181 `i `uc
+-> -> 97 `i `uc
+-> -> 166 `i `uc
+-> -> 164 `i `uc
+-> -> 152 `i `uc
+-> -> 10 `i `uc
+-> -> 140 `i `uc
+..
+]
+"27
+[v _time01 `Cuc ~T0 @X0 -> 16 `i e@2064 ]
+[i _time01
+:U ..
+-> -> 122 `i `uc
+-> -> 128 `i `uc
+-> -> 222 `i `uc
+-> -> 117 `i `uc
+-> -> 35 `i `uc
+-> -> 108 `i `uc
+-> -> 53 `i `uc
+-> -> 99 `i `uc
+-> -> 4 `i `uc
+-> -> 91 `i `uc
+-> -> 85 `i `uc
+-> -> 85 `i `uc
+-> -> 224 `i `uc
+-> -> 76 `i `uc
+-> -> 66 `i `uc
+-> -> 69 `i `uc
+..
+]
+"28
+[v _time02 `Cuc ~T0 @X0 -> 16 `i e@2080 ]
+[i _time02
+:U ..
+-> -> 101 `i `uc
+-> -> 62 `i `uc
+-> -> 54 `i `uc
+-> -> 56 `i `uc
+-> -> 164 `i `uc
+-> -> 50 `i `uc
+-> -> 159 `i `uc
+-> -> 45 `i `uc
+-> -> 26 `i `uc
+-> -> 41 `i `uc
+-> -> 7 `i `uc
+-> -> 37 `i `uc
+-> -> 92 `i `uc
+-> -> 33 `i `uc
+-> -> 13 `i `uc
+-> -> 30 `i `uc
+..
+]
+"29
+[v _time03 `Cuc ~T0 @X0 -> 16 `i e@2096 ]
+[i _time03
+:U ..
+-> -> 19 `i `uc
+-> -> 27 `i `uc
+-> -> 154 `i `uc
+-> -> 25 `i `uc
+-> -> 124 `i `uc
+-> -> 23 `i `uc
+-> -> 140 `i `uc
+-> -> 21 `i `uc
+-> -> 197 `i `uc
+-> -> 19 `i `uc
+-> -> 35 `i `uc
+-> -> 18 `i `uc
+-> -> 163 `i `uc
+-> -> 16 `i `uc
+-> -> 68 `i `uc
+-> -> 15 `i `uc
+..
+]
+"30
+[v _time04 `Cuc ~T0 @X0 -> 16 `i e@2112 ]
+[i _time04
+:U ..
+-> -> 1 `i `uc
+-> -> 14 `i `uc
+-> -> 217 `i `uc
+-> -> 12 `i `uc
+-> -> 201 `i `uc
+-> -> 11 `i `uc
+-> -> 208 `i `uc
+-> -> 10 `i `uc
+-> -> 236 `i `uc
+-> -> 9 `i `uc
+-> -> 26 `i `uc
+-> -> 9 `i `uc
+-> -> 137 `i `uc
+-> -> 8 `i `uc
+-> -> 23 `i `uc
+-> -> 8 `i `uc
+..
+]
+"31
+[v _time05 `Cuc ~T0 @X0 -> 16 `i e@2128 ]
+[i _time05
+:U ..
+-> -> 171 `i `uc
+-> -> 7 `i `uc
+-> -> 68 `i `uc
+-> -> 7 `i `uc
+-> -> 227 `i `uc
+-> -> 6 `i `uc
+-> -> 135 `i `uc
+-> -> 6 `i `uc
+-> -> 48 `i `uc
+-> -> 6 `i `uc
+-> -> 222 `i `uc
+-> -> 5 `i `uc
+-> -> 143 `i `uc
+-> -> 5 `i `uc
+-> -> 69 `i `uc
+-> -> 5 `i `uc
+..
+]
+"32
+[v _time06 `Cuc ~T0 @X0 -> 16 `i e@2144 ]
+[i _time06
+:U ..
+-> -> 255 `i `uc
+-> -> 4 `i `uc
+-> -> 188 `i `uc
+-> -> 4 `i `uc
+-> -> 125 `i `uc
+-> -> 4 `i `uc
+-> -> 68 `i `uc
+-> -> 4 `i `uc
+-> -> 26 `i `uc
+-> -> 4 `i `uc
+-> -> 242 `i `uc
+-> -> 3 `i `uc
+-> -> 203 `i `uc
+-> -> 3 `i `uc
+-> -> 166 `i `uc
+-> -> 3 `i `uc
+..
+]
+"33
+[v _time07 `Cuc ~T0 @X0 -> 16 `i e@2160 ]
+[i _time07
+:U ..
+-> -> 130 `i `uc
+-> -> 3 `i `uc
+-> -> 95 `i `uc
+-> -> 3 `i `uc
+-> -> 62 `i `uc
+-> -> 3 `i `uc
+-> -> 30 `i `uc
+-> -> 3 `i `uc
+-> -> 255 `i `uc
+-> -> 2 `i `uc
+-> -> 226 `i `uc
+-> -> 2 `i `uc
+-> -> 198 `i `uc
+-> -> 2 `i `uc
+-> -> 170 `i `uc
+-> -> 2 `i `uc
+..
+]
+"34
+[v _time08 `Cuc ~T0 @X0 -> 16 `i e@2176 ]
+[i _time08
+:U ..
+-> -> 143 `i `uc
+-> -> 2 `i `uc
+-> -> 89 `i `uc
+-> -> 2 `i `uc
+-> -> 40 `i `uc
+-> -> 2 `i `uc
+-> -> 250 `i `uc
+-> -> 1 `i `uc
+-> -> 208 `i `uc
+-> -> 1 `i `uc
+-> -> 170 `i `uc
+-> -> 1 `i `uc
+-> -> 135 `i `uc
+-> -> 1 `i `uc
+-> -> 102 `i `uc
+-> -> 1 `i `uc
+..
+]
+"35
+[v _time09 `Cuc ~T0 @X0 -> 16 `i e@2192 ]
+[i _time09
+:U ..
+-> -> 73 `i `uc
+-> -> 1 `i `uc
+-> -> 46 `i `uc
+-> -> 1 `i `uc
+-> -> 21 `i `uc
+-> -> 1 `i `uc
+-> -> 254 `i `uc
+-> -> 0 `i `uc
+-> -> 233 `i `uc
+-> -> 0 `i `uc
+-> -> 218 `i `uc
+-> -> 0 `i `uc
+-> -> 207 `i `uc
+-> -> 0 `i `uc
+-> -> 196 `i `uc
+-> -> 0 `i `uc
+..
+]
+"36
+[v _time10 `Cuc ~T0 @X0 -> 16 `i e@2208 ]
+[i _time10
+:U ..
+-> -> 186 `i `uc
+-> -> 0 `i `uc
+-> -> 176 `i `uc
+-> -> 0 `i `uc
+-> -> 167 `i `uc
+-> -> 0 `i `uc
+-> -> 158 `i `uc
+-> -> 0 `i `uc
+-> -> 150 `i `uc
+-> -> 0 `i `uc
+-> -> 142 `i `uc
+-> -> 0 `i `uc
+-> -> 135 `i `uc
+-> -> 0 `i `uc
+-> -> 128 `i `uc
+-> -> 0 `i `uc
+..
+]
+"37
+[v _time11 `Cuc ~T0 @X0 -> 16 `i e@2224 ]
+[i _time11
+:U ..
+-> -> 84 `i `uc
+-> -> 0 `i `uc
+-> -> 80 `i `uc
+-> -> 0 `i `uc
+-> -> 77 `i `uc
+-> -> 0 `i `uc
+-> -> 73 `i `uc
+-> -> 0 `i `uc
+-> -> 70 `i `uc
+-> -> 0 `i `uc
+-> -> 67 `i `uc
+-> -> 0 `i `uc
+-> -> 66 `i `uc
+-> -> 0 `i `uc
+-> -> 60 `i `uc
+-> -> 0 `i `uc
+..
+]
+"38
+[v _time12 `Cuc ~T0 @X0 -> 16 `i e@2240 ]
+[i _time12
+:U ..
+-> -> 84 `i `uc
+-> -> 0 `i `uc
+-> -> 80 `i `uc
+-> -> 0 `i `uc
+-> -> 77 `i `uc
+-> -> 0 `i `uc
+-> -> 73 `i `uc
+-> -> 0 `i `uc
+-> -> 70 `i `uc
+-> -> 0 `i `uc
+-> -> 67 `i `uc
+-> -> 0 `i `uc
+-> -> 66 `i `uc
+-> -> 0 `i `uc
+-> -> 60 `i `uc
+-> -> 0 `i `uc
+..
+]
+"39
+[v _time13 `Cuc ~T0 @X0 -> 16 `i e@2256 ]
+[i _time13
+:U ..
+-> -> 54 `i `uc
+-> -> 0 `i `uc
+-> -> 49 `i `uc
+-> -> 0 `i `uc
+-> -> 45 `i `uc
+-> -> 0 `i `uc
+-> -> 41 `i `uc
+-> -> 0 `i `uc
+-> -> 37 `i `uc
+-> -> 0 `i `uc
+-> -> 34 `i `uc
+-> -> 0 `i `uc
+-> -> 31 `i `uc
+-> -> 0 `i `uc
+-> -> 28 `i `uc
+-> -> 0 `i `uc
+..
+]
+"40
+[v _time14 `Cuc ~T0 @X0 -> 16 `i e@2272 ]
+[i _time14
+:U ..
+-> -> 25 `i `uc
+-> -> 0 `i `uc
+-> -> 23 `i `uc
+-> -> 0 `i `uc
+-> -> 22 `i `uc
+-> -> 0 `i `uc
+-> -> 20 `i `uc
+-> -> 0 `i `uc
+-> -> 18 `i `uc
+-> -> 0 `i `uc
+-> -> 16 `i `uc
+-> -> 0 `i `uc
+-> -> 15 `i `uc
+-> -> 0 `i `uc
+-> -> 14 `i `uc
+-> -> 0 `i `uc
+..
+]
+"41
+[v _time15 `Cuc ~T0 @X0 -> 16 `i e@2288 ]
+[i _time15
+:U ..
+-> -> 12 `i `uc
+-> -> 0 `i `uc
+-> -> 11 `i `uc
+-> -> 0 `i `uc
+-> -> 10 `i `uc
+-> -> 0 `i `uc
+-> -> 9 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+-> -> 7 `i `uc
+-> -> 0 `i `uc
+-> -> 7 `i `uc
+-> -> 0 `i `uc
+..
+]
+"64 /Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+[v _env_mode `uc ~T0 @X0 -> 2 `i e ]
+"72
+[v _env_state `uc ~T0 @X0 -> 2 `i e ]
+"75
+[v _gate_state `uc ~T0 @X0 -> 2 `i e ]
+"76
+[v _env_level `l ~T0 @X0 -> 2 `i e ]
+"77
+[v _attack `ui ~T0 @X0 -> 2 `i e ]
+"78
+[v _decay `ui ~T0 @X0 -> 2 `i e ]
+"79
+[v _sustain `ui ~T0 @X0 -> 2 `i e ]
+"80
+[v _release `ui ~T0 @X0 -> 2 `i e ]
+"83
+[v _adc_chans `uc ~T0 @X0 -> 8 `i e ]
+[i _adc_chans
+:U ..
+-> -> 10 `i `uc
+-> -> 11 `i `uc
+-> -> 2 `i `uc
+-> -> 3 `i `uc
+-> -> 4 `i `uc
+-> -> 5 `i `uc
+-> -> 6 `i `uc
+-> -> 7 `i `uc
+..
+]
+"84
+[v _adc_vals `uc ~T0 @X0 -> 8 `i e ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"97
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"100
+[e ( _SYSTEM_Initialize ..  ]
+"102
+[v _chan_sel `uc ~T0 @X0 1 a ]
+[e = _chan_sel -> -> 0 `i `uc ]
+"108
+[e = _WPUA -> -> 55 `i `uc ]
+"111
+[e = _TRISA -> -> 63 `i `uc ]
+"112
+[e = _PORTA -> -> 0 `i `uc ]
+"113
+[e = _TRISB -> -> 48 `i `uc ]
+"114
+[e = _PORTB -> -> 0 `i `uc ]
+"115
+[e = _TRISC -> -> 63 `i `uc ]
+"116
+[e = _PORTC -> -> 0 `i `uc ]
+"117
+[e = _ADCON0 -> -> 1 `i `uc ]
+"119
+[e = _ADCON1 -> -> 80 `i `uc ]
+"123
+[e ( _spi_init ..  ]
+"125
+[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
+"127
+[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
+"130
+[e = _T2CON -> -> 60 `i `uc ]
+"137
+[e ( _load_dac (2 , -> -> 0 `i `uc -> -> 0 `i `ui ]
+"138
+[e ( _load_dac (2 , -> -> 1 `i `uc -> -> 0 `i `ui ]
+"141
+[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+"144
+[e = *U + &U _env_mode * -> -> -> 0 `i `ui `ux -> -> # *U &U _env_mode `ui `ux -> -> 0 `i `uc ]
+"145
+[e = *U + &U _env_mode * -> -> -> 1 `i `ui `ux -> -> # *U &U _env_mode `ui `ux -> -> 0 `i `uc ]
+"146
+[e = *U + &U _env_state * -> -> -> 0 `i `ui `ux -> -> # *U &U _env_state `ui `ux -> -> 0 `i `uc ]
+"147
+[e = *U + &U _env_state * -> -> -> 1 `i `ui `ux -> -> # *U &U _env_state `ui `ux -> -> 0 `i `uc ]
+"148
+[e = *U + &U _gate_state * -> -> -> 0 `i `ui `ux -> -> # *U &U _gate_state `ui `ux -> -> 0 `i `uc ]
+"149
+[e = *U + &U _gate_state * -> -> -> 1 `i `ui `ux -> -> # *U &U _gate_state `ui `ux -> -> 0 `i `uc ]
+"150
+[e = *U + &U _env_level * -> -> -> 0 `i `ui `ux -> -> # *U &U _env_level `ui `ux -> -> 0 `i `l ]
+"151
+[e = *U + &U _env_level * -> -> -> 1 `i `ui `ux -> -> # *U &U _env_level `ui `ux -> -> 0 `i `l ]
+"152
+[e = *U + &U _attack * -> -> -> 0 `i `ui `ux -> -> # *U &U _attack `ui `ux -> -> 100 `i `ui ]
+"153
+[e = *U + &U _attack * -> -> -> 1 `i `ui `ux -> -> # *U &U _attack `ui `ux -> -> 100 `i `ui ]
+"154
+[e = *U + &U _decay * -> -> -> 0 `i `ui `ux -> -> # *U &U _decay `ui `ux -> -> 100 `i `ui ]
+"155
+[e = *U + &U _decay * -> -> -> 1 `i `ui `ux -> -> # *U &U _decay `ui `ux -> -> 100 `i `ui ]
+"156
+[e = *U + &U _sustain * -> -> -> 0 `i `ui `ux -> -> # *U &U _sustain `ui `ux -> -> 4000 `i `ui ]
+"157
+[e = *U + &U _sustain * -> -> -> 1 `i `ui `ux -> -> # *U &U _sustain `ui `ux -> -> 4000 `i `ui ]
+"158
+[e = *U + &U _release * -> -> -> 0 `i `ui `ux -> -> # *U &U _release `ui `ux -> -> 100 `i `ui ]
+"159
+[e = *U + &U _release * -> -> -> 1 `i `ui `ux -> -> # *U &U _release `ui `ux -> -> 100 `i `ui ]
+"162
+[e = _INTCON -> -> 0 `i `uc ]
+"163
+[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
+"164
+[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
+"165
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+"168
+[e :U 931 ]
+{
+"169
+[; <" clrwdt ;# ">
+"170
+[e = . . _SSPCONbits 0 4 -> -> 0 `i `uc ]
+"172
+[e $ ! ! != -> . . _ADCON0bits 2 1 `i -> 0 `i 933  ]
+{
+"174
+[e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
+"176
+[e = *U + &U _adc_vals * -> _chan_sel `ux -> -> # *U &U _adc_vals `ui `ux _ADRESH ]
+"177
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+"178
+[e = _chan_sel -> & + -> _chan_sel `i -> 1 `i -> 7 `i `uc ]
+"179
+[e =& _ADCON0 -> -> 195 `i `Vuc ]
+"180
+[e =| _ADCON0 -> << & -> *U + &U _adc_chans * -> _chan_sel `ux -> -> # *U &U _adc_chans `ui `ux `i -> 15 `i -> 2 `i `Vuc ]
+"181
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"182
+[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+"183
+}
+[e :U 933 ]
+"186
+[e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
+"187
+[e $U 935  ]
+{
+"188
+[e :U 936 ]
+"189
+[e = *U + &U _attack * -> -> -> 0 `i `ui `ux -> -> # *U &U _attack `ui `ux ( _time_lookup (1 -> >> -> *U + &U _adc_vals * -> -> -> 0 `i `ui `ux -> -> # *U &U _adc_vals `ui `ux `i -> 1 `i `uc ]
+"190
+[e $U 934  ]
+"191
+[e :U 937 ]
+"192
+[e = *U + &U _decay * -> -> -> 0 `i `ui `ux -> -> # *U &U _decay `ui `ux ( _time_lookup (1 -> >> -> *U + &U _adc_vals * -> -> -> 1 `i `ui `ux -> -> # *U &U _adc_vals `ui `ux `i -> 1 `i `uc ]
+"193
+[e $U 934  ]
+"194
+[e :U 938 ]
+"195
+[e = *U + &U _sustain * -> -> -> 0 `i `ui `ux -> -> # *U &U _sustain `ui `ux -> << -> *U + &U _adc_vals * -> -> -> 2 `i `ui `ux -> -> # *U &U _adc_vals `ui `ux `i -> 8 `i `ui ]
+"196
+[e $U 934  ]
+"197
+[e :U 939 ]
+"198
+[e = *U + &U _release * -> -> -> 0 `i `ui `ux -> -> # *U &U _release `ui `ux ( _time_lookup (1 -> >> -> *U + &U _adc_vals * -> -> -> 3 `i `ui `ux -> -> # *U &U _adc_vals `ui `ux `i -> 1 `i `uc ]
+"199
+[e $U 934  ]
+"200
+[e :U 940 ]
+"201
+[e = *U + &U _attack * -> -> -> 1 `i `ui `ux -> -> # *U &U _attack `ui `ux ( _time_lookup (1 -> >> -> *U + &U _adc_vals * -> -> -> 4 `i `ui `ux -> -> # *U &U _adc_vals `ui `ux `i -> 1 `i `uc ]
+"202
+[e $U 934  ]
+"203
+[e :U 941 ]
+"204
+[e = *U + &U _decay * -> -> -> 1 `i `ui `ux -> -> # *U &U _decay `ui `ux ( _time_lookup (1 -> >> -> *U + &U _adc_vals * -> -> -> 5 `i `ui `ux -> -> # *U &U _adc_vals `ui `ux `i -> 1 `i `uc ]
+"205
+[e $U 934  ]
+"206
+[e :U 942 ]
+"207
+[e = *U + &U _sustain * -> -> -> 1 `i `ui `ux -> -> # *U &U _sustain `ui `ux -> << -> *U + &U _adc_vals * -> -> -> 6 `i `ui `ux -> -> # *U &U _adc_vals `ui `ux `i -> 8 `i `ui ]
+"208
+[e $U 934  ]
+"209
+[e :U 943 ]
+"210
+[e = *U + &U _release * -> -> -> 1 `i `ui `ux -> -> # *U &U _release `ui `ux ( _time_lookup (1 -> >> -> *U + &U _adc_vals * -> -> -> 7 `i `ui `ux -> -> # *U &U _adc_vals `ui `ux `i -> 1 `i `uc ]
+"211
+[e $U 934  ]
+"212
+}
+[e $U 934  ]
+[e :U 935 ]
+[e [\ -> _chan_sel `i , $ -> 0 `i 936
+ , $ -> 1 `i 937
+ , $ -> 2 `i 938
+ , $ -> 3 `i 939
+ , $ -> 4 `i 940
+ , $ -> 5 `i 941
+ , $ -> 6 `i 942
+ , $ -> 7 `i 943
+ 934 ]
+[e :U 934 ]
+"213
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+"215
+[e $ ! != -> *U + &U _env_mode * -> -> -> 0 `i `ui `ux -> -> # *U &U _env_mode `ui `ux `i -> 1 `i 944  ]
+{
+"216
+[e = *U + &U _env_mode * -> -> -> 0 `i `ui `ux -> -> # *U &U _env_mode `ui `ux -> -> 1 `i `uc ]
+"217
+[e ( _reset_envelope (1 -> -> 0 `i `uc ]
+}
+[e :U 944 ]
+"220
+[e $ ! ! != -> . . _PORTCbits 0 4 `i -> 0 `i 945  ]
+{
+"221
+[e $ ! != -> *U + &U _env_mode * -> -> -> 0 `i `ui `ux -> -> # *U &U _env_mode `ui `ux `i -> 0 `i 946  ]
+{
+"222
+[e = *U + &U _env_mode * -> -> -> 0 `i `ui `ux -> -> # *U &U _env_mode `ui `ux -> -> 0 `i `uc ]
+"223
+[e ( _reset_envelope (1 -> -> 0 `i `uc ]
+"224
+}
+[e :U 946 ]
+"225
+}
+[e $U 947  ]
+"226
+[e :U 945 ]
+[e $ ! ! != -> . . _PORTCbits 0 5 `i -> 0 `i 948  ]
+{
+"227
+[e $ ! != -> *U + &U _env_mode * -> -> -> 0 `i `ui `ux -> -> # *U &U _env_mode `ui `ux `i -> 2 `i 949  ]
+{
+"228
+[e = *U + &U _env_mode * -> -> -> 0 `i `ui `ux -> -> # *U &U _env_mode `ui `ux -> -> 2 `i `uc ]
+"229
+[e ( _reset_envelope (1 -> -> 0 `i `uc ]
+"230
+}
+[e :U 949 ]
+"231
+}
+[e $U 950  ]
+"232
+[e :U 948 ]
+{
+"233
+[e $ ! != -> *U + &U _env_mode * -> -> -> 0 `i `ui `ux -> -> # *U &U _env_mode `ui `ux `i -> 1 `i 951  ]
+{
+"234
+[e = *U + &U _env_mode * -> -> -> 0 `i `ui `ux -> -> # *U &U _env_mode `ui `ux -> -> 1 `i `uc ]
+"235
+[e ( _reset_envelope (1 -> -> 0 `i `uc ]
+"236
+}
+[e :U 951 ]
+"237
+}
+[e :U 950 ]
+[e :U 947 ]
+"239
+[e $ ! ! != -> . . _PORTAbits 0 0 `i -> 0 `i 952  ]
+{
+"240
+[e $ ! != -> *U + &U _env_mode * -> -> -> 1 `i `ui `ux -> -> # *U &U _env_mode `ui `ux `i -> 0 `i 953  ]
+{
+"241
+[e = *U + &U _env_mode * -> -> -> 1 `i `ui `ux -> -> # *U &U _env_mode `ui `ux -> -> 0 `i `uc ]
+"242
+[e ( _reset_envelope (1 -> -> 1 `i `uc ]
+"243
+}
+[e :U 953 ]
+"244
+}
+[e $U 954  ]
+"245
+[e :U 952 ]
+[e $ ! ! != -> . . _PORTAbits 0 1 `i -> 0 `i 955  ]
+{
+"246
+[e $ ! != -> *U + &U _env_mode * -> -> -> 1 `i `ui `ux -> -> # *U &U _env_mode `ui `ux `i -> 2 `i 956  ]
+{
+"247
+[e = *U + &U _env_mode * -> -> -> 1 `i `ui `ux -> -> # *U &U _env_mode `ui `ux -> -> 2 `i `uc ]
+"248
+[e ( _reset_envelope (1 -> -> 1 `i `uc ]
+"249
+}
+[e :U 956 ]
+"250
+}
+[e $U 957  ]
+"251
+[e :U 955 ]
+{
+"252
+[e $ ! != -> *U + &U _env_mode * -> -> -> 1 `i `ui `ux -> -> # *U &U _env_mode `ui `ux `i -> 1 `i 958  ]
+{
+"253
+[e = *U + &U _env_mode * -> -> -> 1 `i `ui `ux -> -> # *U &U _env_mode `ui `ux -> -> 1 `i `uc ]
+"254
+[e ( _reset_envelope (1 -> -> 1 `i `uc ]
+"255
+}
+[e :U 958 ]
+"256
+}
+[e :U 957 ]
+[e :U 954 ]
+"258
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"260
+}
+[e :U 930 ]
+[e $U 931  ]
+[e :U 932 ]
+"262
+[e :UE 929 ]
+}
+[v $root$_my_isr `(v ~T0 @X0 0 e ]
+"265
+[v _my_isr `(v ~T1 @X0 1 ef ]
+{
+[e :U _my_isr ]
+[f ]
+"267
+[e $ ! != -> . . _PIR1bits 0 1 `i -> 0 `i 960  ]
+{
+"269
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+"270
+[e = . . _PORTCbits 0 6 -> -> 1 `i `uc ]
+"272
+[e ( _envelope_control (2 , -> -> 0 `i `uc . . _PORTAbits 0 3 ]
+"273
+[e ( _envelope_control (2 , -> -> 1 `i `uc . . _PORTAbits 0 5 ]
+"275
+[e ( _load_dac (2 , -> -> 0 `i `uc -> >> *U + &U _env_level * -> -> -> 0 `i `ui `ux -> -> # *U &U _env_level `ui `ux -> 4 `i `ui ]
+"276
+[e ( _load_dac (2 , -> -> 1 `i `uc -> >> *U + &U _env_level * -> -> -> 1 `i `ui `ux -> -> # *U &U _env_level `ui `ux -> 4 `i `ui ]
+"278
+[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
+"279
+}
+[e :U 960 ]
+"280
+[e :UE 959 ]
+}
+"282
+[v _spi_init `(v ~T0 @X0 1 ef ]
+{
+[e :U _spi_init ]
+[f ]
+"284
+[e = . . _TRISCbits 0 7 -> -> 0 `i `uc ]
+"285
+[e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
+"286
+[e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
+"288
+[e = . . _SSPSTATbits 0 6 -> -> 1 `i `uc ]
+"290
+[e = . . _SSPCONbits 0 2 -> -> 0 `i `uc ]
+"292
+[e = . . _SSPCONbits 0 4 -> -> 0 `i `uc ]
+"293
+[e = . . _SSPCONbits 0 3 -> -> 0 `i `uc ]
+"295
+[e = . . _SSPCONbits 0 1 -> -> 0 `i `uc ]
+"296
+[e = . . _SSPCONbits 1 3 -> -> 0 `i `uc ]
+"297
+[e = . . _SSPCONbits 1 2 -> -> 0 `i `uc ]
+"298
+[e = . . _SSPCONbits 1 1 -> -> 0 `i `uc ]
+"299
+[e = . . _SSPCONbits 1 0 -> -> 0 `i `uc ]
+"301
+[e = . . _SSPCONbits 0 2 -> -> 1 `i `uc ]
+"303
+[e :UE 961 ]
+}
+"307
+[v _load_dac `(v ~T0 @X0 1 ef2`uc`ui ]
+{
+[e :U _load_dac ]
+[v _chan `uc ~T0 @X0 1 r1 ]
+[v _val `ui ~T0 @X0 1 r2 ]
+[f ]
+"308
+[v _dac_bits `uc ~T0 @X0 1 a ]
+"309
+[v _temp_h `ui ~T0 @X0 1 a ]
+"310
+[v _temp_l `ui ~T0 @X0 1 a ]
+"311
+[v _read_buf `uc ~T0 @X0 1 a ]
+"313
+[e = _temp_h >> _val -> 2 `i ]
+"314
+[e = _temp_l _val ]
+"316
+[e $ ! != -> _chan `i -> 0 `i 963  ]
+[e = _dac_bits -> -> 144 `i `uc ]
+[e $U 964  ]
+"317
+[e :U 963 ]
+[e = _dac_bits -> -> 16 `i `uc ]
+[e :U 964 ]
+"319
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+"322
+[e = _SSP1BUF -> | -> _dac_bits `ui << _temp_h -> 8 `i `uc ]
+"325
+[e = _SSP1BUF -> << _temp_l -> 8 `i `uc ]
+"327
+[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
+"328
+[e :UE 962 ]
+}
+"334
+[v _reset_envelope `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _reset_envelope ]
+[v _chan `uc ~T0 @X0 1 r1 ]
+[f ]
+"335
+[e $ ! > -> _chan `i -> 1 `i 966  ]
+[e $UE 965  ]
+[e :U 966 ]
+"336
+[e = *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux -> -> 0 `i `uc ]
+"337
+[e = *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> -> 0 `i `l ]
+"338
+[e :UE 965 ]
+}
+"342
+[v _envelope_control `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _envelope_control ]
+[v _chan `uc ~T0 @X0 1 r1 ]
+[v _gate `uc ~T0 @X0 1 r2 ]
+[f ]
+"343
+[e $ ! > -> _chan `i -> 1 `i 968  ]
+[e $UE 967  ]
+[e :U 968 ]
+"348
+[e $ ! == -> *U + &U _env_mode * -> _chan `ux -> -> # *U &U _env_mode `ui `ux `i -> 2 `i 969  ]
+{
+"350
+[e $ ! == -> *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux `i -> 0 `i 970  ]
+{
+"351
+[e = *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux -> -> 1 `i `uc ]
+"352
+}
+[e :U 970 ]
+"353
+}
+[e $U 971  ]
+"354
+[e :U 969 ]
+{
+"356
+[e $ ! && == -> _gate `i -> 0 `i == -> *U + &U _gate_state * -> _chan `ux -> -> # *U &U _gate_state `ui `ux `i -> 0 `i 972  ]
+{
+"357
+[e = *U + &U _gate_state * -> _chan `ux -> -> # *U &U _gate_state `ui `ux -> -> 1 `i `uc ]
+"358
+[e = *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux -> -> 1 `i `uc ]
+"359
+}
+[e :U 972 ]
+"361
+[e $ ! && == -> _gate `i -> 1 `i == -> *U + &U _gate_state * -> _chan `ux -> -> # *U &U _gate_state `ui `ux `i -> 1 `i 973  ]
+{
+"362
+[e = *U + &U _gate_state * -> _chan `ux -> -> # *U &U _gate_state `ui `ux -> -> 0 `i `uc ]
+"364
+[e $ ! == -> *U + &U _env_mode * -> _chan `ux -> -> # *U &U _env_mode `ui `ux `i -> 0 `i 974  ]
+[e = *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux -> -> 4 `i `uc ]
+[e :U 974 ]
+"365
+}
+[e :U 973 ]
+"366
+}
+[e :U 971 ]
+"372
+[e $ ! == -> *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux `i -> 1 `i 975  ]
+{
+"373
+[e =+ *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _attack * -> _chan `ux -> -> # *U &U _attack `ui `ux `l ]
+"375
+[e $ ! > *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> 65535 `l 976  ]
+{
+"376
+[e = *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> 65535 `l ]
+"378
+[e $ ! == -> *U + &U _env_mode * -> _chan `ux -> -> # *U &U _env_mode `ui `ux `i -> 0 `i 977  ]
+{
+"379
+[e = *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux -> -> 2 `i `uc ]
+"380
+}
+[e $U 978  ]
+"382
+[e :U 977 ]
+{
+"383
+[e = *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux -> -> 4 `i `uc ]
+"384
+}
+[e :U 978 ]
+"385
+}
+[e :U 976 ]
+"386
+[e $UE 967  ]
+"387
+}
+[e :U 975 ]
+"389
+[e $ ! == -> *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux `i -> 2 `i 979  ]
+{
+"390
+[e =- *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _decay * -> _chan `ux -> -> # *U &U _decay `ui `ux `l ]
+"392
+[e $ ! < *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _sustain * -> _chan `ux -> -> # *U &U _sustain `ui `ux `l 980  ]
+{
+"393
+[e = *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _sustain * -> _chan `ux -> -> # *U &U _sustain `ui `ux `l ]
+"394
+[e = *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux -> -> 3 `i `uc ]
+"395
+}
+[e :U 980 ]
+"396
+[e $UE 967  ]
+"397
+}
+[e :U 979 ]
+"399
+[e $ ! == -> *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux `i -> 3 `i 981  ]
+{
+"401
+[e = *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _sustain * -> _chan `ux -> -> # *U &U _sustain `ui `ux `l ]
+"402
+[e $UE 967  ]
+"403
+}
+[e :U 981 ]
+"405
+[e $ ! == -> *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux `i -> 4 `i 982  ]
+{
+"406
+[e =- *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _release * -> _chan `ux -> -> # *U &U _release `ui `ux `l ]
+"408
+[e $ ! < *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> -> 0 `i `l 983  ]
+{
+"409
+[e = *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> -> 0 `i `l ]
+"410
+[e = *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux -> -> 0 `i `uc ]
+"411
+}
+[e :U 983 ]
+"412
+[e $UE 967  ]
+"413
+}
+[e :U 982 ]
+"414
+[e :UE 967 ]
+}
+"417
+[v _time_lookup `(ui ~T0 @X0 1 ef1`uc ]
+{
+[e :U _time_lookup ]
+[v _val `uc ~T0 @X0 1 r1 ]
+[f ]
+"418
+[v _temp `ui ~T0 @X0 1 a ]
+"419
+[e = _temp ( _flash_read (1 -> + -> 2048 `i << -> _val `i -> 1 `i `ui ]
+"420
+[e =| _temp << ( _flash_read (1 -> + -> 2049 `i << -> _val `i -> 1 `i `ui -> 8 `i ]
+"421
+[e ) _temp ]
+[e $UE 984  ]
+"422
+[e :UE 984 ]
+}
+"425
+[v _flash_read `(ui ~T0 @X0 1 ef1`ui ]
+{
+[e :U _flash_read ]
+[v _flash_adr `ui ~T0 @X0 1 r1 ]
+[f ]
+"426
+[e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
+"427
+[v _flash_value `s ~T0 @X0 1 a ]
+[e = _flash_value -> -> 0 `i `s ]
+"429
+[e = _EEADRH -> >> _flash_adr -> 8 `i `uc ]
+"430
+[e = _EEADR -> & _flash_adr -> -> 255 `i `ui `us ]
+"432
+[e = . . _NVMCON1bits 0 6 -> -> 1 `i `uc ]
+"433
+[e = . . _NVMCON1bits 0 0 -> -> 1 `i `uc ]
+"435
+[e = _flash_value -> _EEDAT `s ]
+"436
+[e ) -> _flash_value `ui ]
+[e $UE 985  ]
+"437
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+"439
+[e :UE 985 ]
+}

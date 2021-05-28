@@ -1,0 +1,336 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F18344 ]
+[d frameptr 6 ]
+"10 /Applications/microchip/xc8/v2.31/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /Applications/microchip/xc8/v2.31/pic/sources/c99/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /Applications/microchip/xc8/v2.31/pic/sources/c99/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"97 /Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"265
+[v _my_isr my_isr `II(v  1 e 1 0 ]
+"282
+[v _spi_init spi_init `(v  1 e 1 0 ]
+"307
+[v _load_dac load_dac `(v  1 e 1 0 ]
+[v i1_load_dac load_dac `(v  1 e 1 0 ]
+"334
+[v _reset_envelope reset_envelope `(v  1 e 1 0 ]
+"342
+[v _envelope_control envelope_control `(v  1 e 1 0 ]
+"417
+[v _time_lookup time_lookup `(ui  1 e 2 0 ]
+"425
+[v _flash_read flash_read `(ui  1 e 2 0 ]
+"352 /Applications/microchip/xc8/v2.31/pic/include/proc/pic16f18344.h
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+[s S114 . 1 `uc 1 INTEDG 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"365
+[u S119 . 1 `S114 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES119  1 e 1 @11 ]
+"385
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+[s S212 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+]
+"400
+[u S219 . 1 `S212 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES219  1 e 1 @12 ]
+"435
+[v _PORTB PORTB `VEuc  1 e 1 @13 ]
+[s S39 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"449
+[u S45 . 1 `S39 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES45  1 e 1 @13 ]
+"474
+[v _PORTC PORTC `VEuc  1 e 1 @14 ]
+[s S191 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"491
+[u S200 . 1 `S191 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES200  1 e 1 @14 ]
+[s S229 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 BCL1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"586
+[u S238 . 1 `S229 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES238  1 e 1 @17 ]
+"1569
+[v _T2CON T2CON `VEuc  1 e 1 @31 ]
+"1640
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1685
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+[s S54 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1699
+[u S60 . 1 `S54 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES60  1 e 1 @141 ]
+"1724
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S256 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1741
+[u S265 . 1 `S256 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES265  1 e 1 @142 ]
+[s S127 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 BCL1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1836
+[u S136 . 1 `S127 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES136  1 e 1 @145 ]
+"2142
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+"2162
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+[s S76 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :6:2 
+]
+"2188
+[s S80 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADGO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+`uc 1 CHS5 1 0 :1:7 
+]
+[s S89 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[u S92 . 1 `S76 1 . 1 0 `S80 1 . 1 0 `S89 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES92  1 e 1 @157 ]
+"2248
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+"4023
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"4174
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+[s S277 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"5013
+[u S286 . 1 `S277 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES286  1 e 1 @532 ]
+[s S148 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"5154
+[s S154 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S159 . 1 `S148 1 . 1 0 `S154 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES159  1 e 1 @533 ]
+"10178
+[v _EEADR EEADR `VEus  1 e 2 @2193 ]
+"10446
+[v _EEADRH EEADRH `VEuc  1 e 1 @2194 ]
+"10680
+[v _EEDAT EEDAT `VEus  1 e 2 @2195 ]
+[s S306 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 LWLO 1 0 :1:5 
+`uc 1 NVMREGS 1 0 :1:6 
+]
+"11188
+[s S314 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 CFGS 1 0 :1:6 
+]
+[u S317 . 1 `S306 1 . 1 0 `S314 1 . 1 0 ]
+[v _NVMCON1bits NVMCON1bits `VES317  1 e 1 @2197 ]
+"64 /Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+[v _env_mode env_mode `[2]uc  1 e 2 0 ]
+"72
+[v _env_state env_state `[2]uc  1 e 2 0 ]
+"75
+[v _gate_state gate_state `[2]uc  1 e 2 0 ]
+"76
+[v _env_level env_level `[2]l  1 e 8 0 ]
+"77
+[v _attack attack `[2]ui  1 e 4 0 ]
+"78
+[v _decay decay `[2]ui  1 e 4 0 ]
+"79
+[v _sustain sustain `[2]ui  1 e 4 0 ]
+"80
+[v _release release `[2]ui  1 e 4 0 ]
+"83
+[v _adc_chans adc_chans `[8]uc  1 e 8 0 ]
+"84
+[v _adc_vals adc_vals `[8]uc  1 e 8 0 ]
+"26 /Users/marcodellav/MPLABXProjects/PIC16F18344.X/time_map.h
+[v _time00 time00 `DC[16]uc  1 e 16 @2048 ]
+"27
+[v _time01 time01 `DC[16]uc  1 e 16 @2064 ]
+"28
+[v _time02 time02 `DC[16]uc  1 e 16 @2080 ]
+"29
+[v _time03 time03 `DC[16]uc  1 e 16 @2096 ]
+"30
+[v _time04 time04 `DC[16]uc  1 e 16 @2112 ]
+"31
+[v _time05 time05 `DC[16]uc  1 e 16 @2128 ]
+"32
+[v _time06 time06 `DC[16]uc  1 e 16 @2144 ]
+"33
+[v _time07 time07 `DC[16]uc  1 e 16 @2160 ]
+"34
+[v _time08 time08 `DC[16]uc  1 e 16 @2176 ]
+"35
+[v _time09 time09 `DC[16]uc  1 e 16 @2192 ]
+"36
+[v _time10 time10 `DC[16]uc  1 e 16 @2208 ]
+"37
+[v _time11 time11 `DC[16]uc  1 e 16 @2224 ]
+"38
+[v _time12 time12 `DC[16]uc  1 e 16 @2240 ]
+"39
+[v _time13 time13 `DC[16]uc  1 e 16 @2256 ]
+"40
+[v _time14 time14 `DC[16]uc  1 e 16 @2272 ]
+"41
+[v _time15 time15 `DC[16]uc  1 e 16 @2288 ]
+"97 /Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"102
+[v main@chan_sel chan_sel `uc  1 a 1 23 ]
+"262
+} 0
+"417
+[v _time_lookup time_lookup `(ui  1 e 2 0 ]
+{
+[v time_lookup@val val `uc  1 a 1 wreg ]
+"418
+[v time_lookup@temp temp `ui  1 a 2 17 ]
+"417
+[v time_lookup@val val `uc  1 a 1 wreg ]
+"419
+[v time_lookup@val val `uc  1 a 1 19 ]
+"422
+} 0
+"425
+[v _flash_read flash_read `(ui  1 e 2 0 ]
+{
+"427
+[v flash_read@flash_value flash_value `s  1 a 2 9 ]
+"425
+[v flash_read@flash_adr flash_adr `ui  1 p 2 5 ]
+"439
+} 0
+"282
+[v _spi_init spi_init `(v  1 e 1 0 ]
+{
+"303
+} 0
+"334
+[v _reset_envelope reset_envelope `(v  1 e 1 0 ]
+{
+[v reset_envelope@chan chan `uc  1 a 1 wreg ]
+[v reset_envelope@chan chan `uc  1 a 1 wreg ]
+[v reset_envelope@chan chan `uc  1 a 1 6 ]
+"338
+} 0
+"307
+[v _load_dac load_dac `(v  1 e 1 0 ]
+{
+[v load_dac@chan chan `uc  1 a 1 wreg ]
+"308
+[v load_dac@dac_bits dac_bits `uc  1 a 1 13 ]
+"307
+[v load_dac@chan chan `uc  1 a 1 wreg ]
+[v load_dac@val val `ui  1 p 2 5 ]
+[v load_dac@chan chan `uc  1 a 1 12 ]
+"328
+} 0
+"265
+[v _my_isr my_isr `II(v  1 e 1 0 ]
+{
+"280
+} 0
+"307
+[v i1_load_dac load_dac `(v  1 e 1 0 ]
+{
+[v i1load_dac@chan chan `uc  1 a 1 wreg ]
+"308
+[v i1load_dac@dac_bits dac_bits `uc  1 a 1 8 ]
+"307
+[v i1load_dac@chan chan `uc  1 a 1 wreg ]
+[v i1load_dac@val val `ui  1 p 2 0 ]
+[v i1load_dac@chan chan `uc  1 a 1 7 ]
+"328
+} 0
+"342
+[v _envelope_control envelope_control `(v  1 e 1 0 ]
+{
+[v envelope_control@chan chan `uc  1 a 1 wreg ]
+[v envelope_control@chan chan `uc  1 a 1 wreg ]
+[v envelope_control@gate gate `uc  1 p 1 0 ]
+[v envelope_control@chan chan `uc  1 a 1 13 ]
+"414
+} 0

@@ -1,0 +1,837 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$main.o
+cinit CODE 0 7E8 7E8 18 2
+text1 CODE 0 437 437 30 2
+text2 CODE 0 416 416 21 2
+text3 CODE 0 3B6 3B6 10 2
+text4 CODE 0 3F6 3F6 20 2
+text5 CODE 0 3DE 3DE 18 2
+text7 CODE 0 3C6 3C6 18 2
+text8 CODE 0 5FB 5FB 1ED 2
+maintext CODE 0 467 467 194 2
+_time00_text STRCODE 0 8F0 8F0 10 2
+_time01_text STRCODE 0 8E0 8E0 10 2
+_time02_text STRCODE 0 8D0 8D0 10 2
+cstackCOMMON COMMON 1 70 70 E 1
+_time03_text STRCODE 0 8C0 8C0 10 2
+_time04_text STRCODE 0 8B0 8B0 10 2
+_time05_text STRCODE 0 8A0 8A0 10 2
+_time06_text STRCODE 0 890 890 10 2
+_time07_text STRCODE 0 880 880 10 2
+cstackBANK0 BANK0 1 46 46 18 1
+_time08_text STRCODE 0 870 870 10 2
+_time09_text STRCODE 0 860 860 10 2
+inittext CODE 0 3A8 3A8 6 2
+intentry CODE 0 2 2 50 2
+bssBANK0 BANK0 1 20 20 26 1
+_time10_text STRCODE 0 850 850 10 2
+_time11_text STRCODE 0 840 840 10 2
+_time12_text STRCODE 0 830 830 10 2
+_time13_text STRCODE 0 820 820 10 2
+_time14_text STRCODE 0 810 810 10 2
+_time15_text STRCODE 0 800 800 10 2
+idataBANK0 CODE 0 3AE 3AE 8 2
+dataBANK0 BANK0 1 5E 5E 8 1
+clrtext CODE 0 3A2 3A2 6 2
+$startup.o
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 52 52 3 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 66-6F 1
+RAM A0-EF 1
+RAM 120-16F 1
+RAM 1A0-1EF 1
+RAM 220-26F 1
+RAM 2A0-2EF 1
+RAM 320-32F 1
+BANK0 66-6F 1
+BANK1 A0-EF 1
+BANK2 120-16F 1
+BANK3 1A0-1EF 1
+BANK4 220-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-32F 1
+CONST 55-3A1 2
+CONST 900-FFF 2
+ENTRY 55-3A1 2
+ENTRY 900-FFF 2
+IDLOC 8000-8003 2
+SFR10 500-56F 1
+SFR11 580-5EF 1
+SFR12 600-66F 1
+SFR13 680-6EF 1
+SFR14 700-76F 1
+SFR15 780-7EF 1
+SFR16 800-86F 1
+SFR17 880-8EF 1
+SFR18 900-96F 1
+SFR19 980-9EF 1
+SFR20 A00-A6F 1
+SFR21 A80-AEF 1
+SFR22 B00-B6F 1
+SFR23 B80-BEF 1
+SFR24 C00-C6F 1
+SFR25 C80-CEF 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+CODE 55-3A1 2
+CODE 900-FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-19F 1
+SFR4 200-21F 1
+SFR5 280-29F 1
+SFR6 300-31F 1
+SFR7 380-3EF 1
+SFR8 400-46F 1
+SFR9 480-4EF 1
+BIGRAM 2000-21EF 1
+CONFIG 8007-800A 2
+EEDATA F000-F0FF 2
+STRCODE 55-3A1 2
+STRCODE 900-FFF 2
+STRING 55-3A1 2
+STRING 900-FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$main.o
+7E8 cinit CODE >2013:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7E8 cinit CODE >2016:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7E8 cinit CODE >2070:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7E9 cinit CODE >2071:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7EA cinit CODE >2072:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7EB cinit CODE >2073:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7EC cinit CODE >2074:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7ED cinit CODE >2075:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7EE cinit CODE >2076:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7EF cinit CODE >2077:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7F0 cinit CODE >2078:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7F1 cinit CODE >2079:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7F4 cinit CODE >2096:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7F5 cinit CODE >2097:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7F6 cinit CODE >2098:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7F7 cinit CODE >2099:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7F8 cinit CODE >2100:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7F9 cinit CODE >2101:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7FC cinit CODE >2107:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7FC cinit CODE >2109:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7FD cinit CODE >2110:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+7FE cinit CODE >2111:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+2 intentry CODE >265:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4 intentry CODE >267:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+9 intentry CODE >269:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+A intentry CODE >270:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+B intentry CODE >272:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+13 intentry CODE >273:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+1C intentry CODE >275:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+35 intentry CODE >276:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4E intentry CODE >278:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+50 intentry CODE >280:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5FB text8 CODE >342:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5FC text8 CODE >343:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+603 text8 CODE >348:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+60D text8 CODE >350:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+616 text8 CODE >351:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+61D text8 CODE >356:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+62B text8 CODE >357:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+631 text8 CODE >358:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+637 text8 CODE >361:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+645 text8 CODE >362:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+64A text8 CODE >364:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+65B text8 CODE >366:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+65B text8 CODE >372:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+664 text8 CODE >373:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+688 text8 CODE >375:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+6A1 text8 CODE >376:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+6B4 text8 CODE >378:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+6BD text8 CODE >379:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+6C5 text8 CODE >380:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+6C6 text8 CODE >383:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+6CF text8 CODE >389:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+6D9 text8 CODE >390:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+6FE text8 CODE >392:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+735 text8 CODE >393:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+756 text8 CODE >394:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+75F text8 CODE >399:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+769 text8 CODE >401:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+78B text8 CODE >405:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+795 text8 CODE >406:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+7BA text8 CODE >408:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+7D1 text8 CODE >409:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+7E2 text8 CODE >410:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+7E7 text8 CODE >414:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3C6 text7 CODE >307:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3C7 text7 CODE >313:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3C7 text7 CODE >314:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3C7 text7 CODE >316:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3D1 text7 CODE >317:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3D5 text7 CODE >319:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3D7 text7 CODE >322:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3DA text7 CODE >325:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3DB text7 CODE >327:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3DD text7 CODE >328:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3DE text5 CODE >307:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3E0 text5 CODE >313:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3E0 text5 CODE >314:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3E0 text5 CODE >316:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3EA text5 CODE >317:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3EE text5 CODE >319:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3EF text5 CODE >322:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3F2 text5 CODE >325:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3F3 text5 CODE >327:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3F5 text5 CODE >328:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3F6 text4 CODE >334:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3F8 text4 CODE >335:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3FF text4 CODE >336:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+404 text4 CODE >337:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+415 text4 CODE >338:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3B6 text3 CODE >282:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3B6 text3 CODE >284:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3B8 text3 CODE >285:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3B9 text3 CODE >286:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3BA text3 CODE >288:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3BC text3 CODE >290:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3BD text3 CODE >292:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3BE text3 CODE >293:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3BF text3 CODE >295:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3C0 text3 CODE >296:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3C1 text3 CODE >297:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3C2 text3 CODE >298:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3C3 text3 CODE >299:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3C4 text3 CODE >301:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3C5 text3 CODE >303:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+416 text2 CODE >425:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+416 text2 CODE >426:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+417 text2 CODE >427:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+417 text2 CODE >429:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+41B text2 CODE >430:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+429 text2 CODE >432:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+42A text2 CODE >433:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+42B text2 CODE >435:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+432 text2 CODE >436:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+436 text2 CODE >439:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+437 text1 CODE >417:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+439 text1 CODE >419:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+44C text1 CODE >420:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+462 text1 CODE >421:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+466 text1 CODE >422:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+467 maintext CODE >97:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+467 maintext CODE >100:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+46A maintext CODE >102:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+46C maintext CODE >108:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+46F maintext CODE >111:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+472 maintext CODE >112:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+474 maintext CODE >113:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+477 maintext CODE >114:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+479 maintext CODE >115:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+47C maintext CODE >116:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+47E maintext CODE >117:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+481 maintext CODE >119:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+483 maintext CODE >123:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+486 maintext CODE >125:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+488 maintext CODE >127:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+48A maintext CODE >130:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+48D maintext CODE >137:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+494 maintext CODE >138:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+49C maintext CODE >141:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+49E maintext CODE >144:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4A0 maintext CODE >145:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4A1 maintext CODE >146:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4A2 maintext CODE >147:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4A3 maintext CODE >148:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4A4 maintext CODE >149:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4A5 maintext CODE >150:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4AD maintext CODE >151:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4B5 maintext CODE >152:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4B9 maintext CODE >153:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4BD maintext CODE >154:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4C1 maintext CODE >155:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4C5 maintext CODE >156:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4C9 maintext CODE >157:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4CD maintext CODE >158:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4D1 maintext CODE >159:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4D5 maintext CODE >162:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4D6 maintext CODE >163:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4D7 maintext CODE >164:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4D9 maintext CODE >165:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4DA maintext CODE >168:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4DA maintext CODE >169:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4DB maintext CODE >170:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4DD maintext CODE >172:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4E2 maintext CODE >174:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4E3 maintext CODE >176:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4EC maintext CODE >177:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4ED maintext CODE >178:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4F3 maintext CODE >179:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+4F8 maintext CODE >180:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+50A maintext CODE >181:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+50E maintext CODE >182:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+510 maintext CODE >186:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+511 maintext CODE >187:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+512 maintext CODE >189:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+51B maintext CODE >190:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+51C maintext CODE >192:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+525 maintext CODE >193:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+526 maintext CODE >195:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+530 maintext CODE >196:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+531 maintext CODE >198:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+53A maintext CODE >199:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+53B maintext CODE >201:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+544 maintext CODE >202:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+545 maintext CODE >204:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+54E maintext CODE >205:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+54F maintext CODE >207:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+559 maintext CODE >208:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+55A maintext CODE >210:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+563 maintext CODE >211:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+564 maintext CODE >212:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+587 maintext CODE >213:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+588 maintext CODE >215:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+58D maintext CODE >216:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+58F maintext CODE >217:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+593 maintext CODE >220:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+598 maintext CODE >221:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+59D maintext CODE >222:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+59E maintext CODE >223:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5A3 maintext CODE >226:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5A7 maintext CODE >227:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5AD maintext CODE >228:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5B1 maintext CODE >229:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5B6 maintext CODE >233:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5BB maintext CODE >234:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5BD maintext CODE >235:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5C1 maintext CODE >239:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5C6 maintext CODE >240:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5CB maintext CODE >241:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5CC maintext CODE >242:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5D1 maintext CODE >245:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5D5 maintext CODE >246:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5DB maintext CODE >247:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5DF maintext CODE >248:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5E4 maintext CODE >252:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5E9 maintext CODE >253:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5EB maintext CODE >254:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+5EF maintext CODE >258:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.c
+3A2 clrtext CODE >2085:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+3A2 clrtext CODE >2086:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+3A3 clrtext CODE >2087:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+3A3 clrtext CODE >2088:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+3A4 clrtext CODE >2089:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+3A5 clrtext CODE >2090:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+3A6 clrtext CODE >2091:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+3A7 clrtext CODE >2092:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+3A8 inittext CODE >2059:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+3A8 inittext CODE >2060:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+3A9 inittext CODE >2061:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+3A9 inittext CODE >2062:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+3AA inittext CODE >2063:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+3AB inittext CODE >2064:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+3AC inittext CODE >2065:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+3AD inittext CODE >2066:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/main.s
+$startup.o
+52 end_init CODE >90:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/startup.s
+53 end_init CODE >92:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/startup.s
+52 init CODE >77:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/startup.s
+0 functab ENTRY >42:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/startup.s
+0 functab ENTRY >43:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/startup.s
+0 functab ENTRY >44:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/startup.s
+0 functab ENTRY >45:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/startup.s
+0 functab ENTRY >46:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/startup.s
+0 functab ENTRY >47:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/startup.s
+0 reset_vec CODE >67:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/startup.s
+0 reset_vec CODE >72:/Users/marcodellav/MPLABXProjects/PIC16F18344.X/startup.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__L_time10_text 0 0 ABS 0 _time10_text -
+___latbits 1 0 ABS 0 - main.o
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__L_time11_text 0 0 ABS 0 _time11_text -
+__size_of_load_dac 0 0 ABS 0 - main.o
+__Hspace_0 900 0 ABS 0 - -
+__Hspace_1 7E 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+flash_read@flash_adr 4B 0 BANK0 1 cstackBANK0 main.o
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__L_time12_text 0 0 ABS 0 _time12_text -
+__size_ofi1_load_dac 0 0 ABS 0 - main.o
+__L_time13_text 0 0 ABS 0 _time13_text -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__L_time14_text 0 0 ABS 0 _time14_text -
+flash_read@flash_value 4F 0 BANK0 1 cstackBANK0 main.o
+__L_time15_text 0 0 ABS 0 _time15_text -
+__Hstrings 0 0 ABS 0 strings -
+_time08_absaddr 880 0 ABS 0 - main.o
+_WPUA 20C 0 ABS 0 - main.o
+___sp 0 0 STACK 2 stack startup.o
+_main 8CE 0 CODE 0 maintext main.o
+btemp 7E 0 ABS 0 - main.o
+__end_of_reset_envelope 82C 0 CODE 0 text4 main.o
+start A4 0 CODE 0 init startup.o
+__size_of_main 0 0 ABS 0 - main.o
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__Hpowerup 0 0 CODE 0 powerup -
+_load_dac 7BC 0 CODE 0 text5 main.o
+intlevel0 0 0 ENTRY 0 functab startup.o
+intlevel1 0 0 ENTRY 0 functab startup.o
+intlevel2 0 0 ENTRY 0 functab startup.o
+intlevel3 0 0 ENTRY 0 functab startup.o
+intlevel4 0 0 ENTRY 0 functab startup.o
+intlevel5 0 0 ENTRY 0 functab startup.o
+_time06_absaddr 860 0 ABS 0 - main.o
+wtemp0 7E 0 ABS 0 - main.o
+__Hfunctab 0 0 ENTRY 0 functab -
+__end_of_load_dac 7EC 0 CODE 0 text5 main.o
+__p_time10_text 10A0 0 STRCODE 0 _time10_text main.o
+__Hclrtext 0 0 ABS 0 clrtext -
+__p_time11_text 1080 0 STRCODE 0 _time11_text main.o
+__p_time12_text 1060 0 STRCODE 0 _time12_text main.o
+__p_time13_text 1040 0 STRCODE 0 _time13_text main.o
+_ADCON0 9D 0 ABS 0 - main.o
+_ADCON1 9E 0 ABS 0 - main.o
+_ADRESH 9C 0 ABS 0 - main.o
+__p_time14_text 1020 0 STRCODE 0 _time14_text main.o
+_SSPCONbits 215 0 ABS 0 - main.o
+__p_time15_text 1000 0 STRCODE 0 _time15_text main.o
+_EEADRH 892 0 ABS 0 - main.o
+_time04_absaddr 840 0 ABS 0 - main.o
+_flash_read 82C 0 CODE 0 text2 main.o
+__Lmaintext 0 0 ABS 0 maintext -
+_envelope_control BF6 0 CODE 0 text8 main.o
+_time14_absaddr 8E0 0 ABS 0 - main.o
+reset_envelope@chan 4C 0 BANK0 1 cstackBANK0 main.o
+_INTCON B 0 ABS 0 - main.o
+___stackhi 0 0 ABS 0 - startup.o
+___stacklo 0 0 ABS 0 - startup.o
+start_initialization FD0 0 CODE 0 cinit main.o
+_time02_absaddr 820 0 ABS 0 - main.o
+i1load_dac@chan 77 0 COMMON 1 cstackCOMMON main.o
+_TRISBbits 8D 0 ABS 0 - main.o
+_TRISCbits 8E 0 ABS 0 - main.o
+_time12_absaddr 8C0 0 ABS 0 - main.o
+__end_of_my_isr A4 0 CODE 0 intentry main.o
+clear_ram0 744 0 CODE 0 clrtext main.o
+__pcstackBANK0 46 0 BANK0 1 cstackBANK0 main.o
+__end_of_flash_read 86E 0 CODE 0 text2 main.o
+_release 30 0 BANK0 1 bssBANK0 main.o
+__end_of_time_lookup 8CE 0 CODE 0 text1 main.o
+___int_sp 0 0 STACK 2 stack startup.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hbank6 0 0 ABS 0 bank6 -
+__Hbank7 0 0 BANK7 1 bank7 -
+__Hbank8 0 0 BANK8 1 bank8 -
+__Hbank9 0 0 BANK9 1 bank9 -
+__Hcinit 1000 0 CODE 0 cinit -
+time_lookup@val 59 0 BANK0 1 cstackBANK0 main.o
+__Hsfr10 0 0 ABS 0 sfr10 -
+__Hsfr11 0 0 ABS 0 sfr11 -
+__Hsfr12 0 0 ABS 0 sfr12 -
+__Hsfr13 0 0 ABS 0 sfr13 -
+__Hsfr14 0 0 ABS 0 sfr14 -
+__Hsfr15 0 0 ABS 0 sfr15 -
+__Hsfr16 0 0 ABS 0 sfr16 -
+__Hsfr17 0 0 ABS 0 sfr17 -
+__Hsfr18 0 0 ABS 0 sfr18 -
+__Hsfr19 0 0 ABS 0 sfr19 -
+__Hsfr20 0 0 ABS 0 sfr20 -
+__Hsfr21 0 0 ABS 0 sfr21 -
+__Hsfr22 0 0 ABS 0 sfr22 -
+__Hsfr23 0 0 ABS 0 sfr23 -
+__Hsfr24 0 0 ABS 0 sfr24 -
+__Hsfr25 0 0 ABS 0 sfr25 -
+__Hsfr26 0 0 ABS 0 sfr26 -
+__Hsfr27 0 0 ABS 0 sfr27 -
+__Hsfr28 0 0 ABS 0 sfr28 -
+__Hsfr29 0 0 ABS 0 sfr29 -
+__Hsfr30 0 0 ABS 0 sfr30 -
+__Hsfr31 0 0 ABS 0 sfr31 -
+__Hstack 0 0 STACK 2 stack -
+__end_of_time00 1200 0 STRCODE 0 _time00_text main.o
+__end_of_time01 11E0 0 STRCODE 0 _time01_text main.o
+__end_of_time02 11C0 0 STRCODE 0 _time02_text main.o
+__end_of_time03 11A0 0 STRCODE 0 _time03_text main.o
+__end_of_time04 1180 0 STRCODE 0 _time04_text main.o
+__end_of_time05 1160 0 STRCODE 0 _time05_text main.o
+__end_of_time06 1140 0 STRCODE 0 _time06_text main.o
+__end_of_time07 1120 0 STRCODE 0 _time07_text main.o
+__end_of_time08 1100 0 STRCODE 0 _time08_text main.o
+__end_of_time09 10E0 0 STRCODE 0 _time09_text main.o
+__end_of_time10 10C0 0 STRCODE 0 _time10_text main.o
+__end_of_time11 10A0 0 STRCODE 0 _time11_text main.o
+__end_of_time12 1080 0 STRCODE 0 _time12_text main.o
+__end_of_time13 1060 0 STRCODE 0 _time13_text main.o
+__end_of_time14 1040 0 STRCODE 0 _time14_text main.o
+__end_of_time15 1020 0 STRCODE 0 _time15_text main.o
+_time00_absaddr 800 0 ABS 0 - main.o
+__Hbank10 0 0 BANK10 1 bank10 -
+__Hbank11 0 0 BANK11 1 bank11 -
+__Hbank12 0 0 BANK12 1 bank12 -
+__Hbank13 0 0 BANK13 1 bank13 -
+__Hbank14 0 0 BANK14 1 bank14 -
+__Hbank15 0 0 BANK15 1 bank15 -
+__Hbank16 0 0 BANK16 1 bank16 -
+__Hbank17 0 0 BANK17 1 bank17 -
+__Hbank18 0 0 BANK18 1 bank18 -
+__Hbank19 0 0 BANK19 1 bank19 -
+__Hbank20 0 0 BANK20 1 bank20 -
+__Hbank21 0 0 BANK21 1 bank21 -
+__Hbank22 0 0 BANK22 1 bank22 -
+__Hbank23 0 0 BANK23 1 bank23 -
+__Hbank24 0 0 BANK24 1 bank24 -
+__Hbank25 0 0 BANK25 1 bank25 -
+__Hbank26 0 0 BANK26 1 bank26 -
+__Hbank27 0 0 BANK27 1 bank27 -
+__Hbank28 0 0 BANK28 1 bank28 -
+__Hbank29 0 0 BANK29 1 bank29 -
+__Hbank30 0 0 BANK30 1 bank30 -
+__Hbank31 0 0 BANK31 1 bank31 -
+__Hbigram 0 0 ABS 0 bigram -
+__Hmaintext 0 0 ABS 0 maintext -
+__end_of_envelope_control FD0 0 CODE 0 text8 main.o
+__Hcommon 0 0 ABS 0 common -
+_time10_absaddr 8A0 0 ABS 0 - main.o
+time_lookup@temp 57 0 BANK0 1 cstackBANK0 main.o
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lbank6 0 0 ABS 0 bank6 -
+__Lbank7 0 0 BANK7 1 bank7 -
+__Lbank8 0 0 BANK8 1 bank8 -
+__Lbank9 0 0 BANK9 1 bank9 -
+__Lcinit FD0 0 CODE 0 cinit -
+__Lsfr10 0 0 ABS 0 sfr10 -
+__Lsfr11 0 0 ABS 0 sfr11 -
+__Lsfr12 0 0 ABS 0 sfr12 -
+__Lsfr13 0 0 ABS 0 sfr13 -
+__Lsfr14 0 0 ABS 0 sfr14 -
+__Lsfr15 0 0 ABS 0 sfr15 -
+__Lsfr16 0 0 ABS 0 sfr16 -
+__Lsfr17 0 0 ABS 0 sfr17 -
+__Lsfr18 0 0 ABS 0 sfr18 -
+__Lsfr19 0 0 ABS 0 sfr19 -
+__Lsfr20 0 0 ABS 0 sfr20 -
+__Lsfr21 0 0 ABS 0 sfr21 -
+__Lsfr22 0 0 ABS 0 sfr22 -
+__Lsfr23 0 0 ABS 0 sfr23 -
+__Lsfr24 0 0 ABS 0 sfr24 -
+__Lsfr25 0 0 ABS 0 sfr25 -
+__Lsfr26 0 0 ABS 0 sfr26 -
+__Lsfr27 0 0 ABS 0 sfr27 -
+__Lsfr28 0 0 ABS 0 sfr28 -
+__Lsfr29 0 0 ABS 0 sfr29 -
+__Lsfr30 0 0 ABS 0 sfr30 -
+__Lsfr31 0 0 ABS 0 sfr31 -
+__Lstack 0 0 STACK 2 stack -
+__size_of_envelope_control 0 0 ABS 0 - main.o
+init_ram 750 0 CODE 0 inittext main.o
+__Linittext 0 0 ABS 0 inittext -
+__H_time00_text 0 0 ABS 0 _time00_text -
+_PORTAbits C 0 ABS 0 - main.o
+_PORTBbits D 0 ABS 0 - main.o
+_PORTCbits E 0 ABS 0 - main.o
+_INTCONbits B 0 ABS 0 - main.o
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit A4 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsfr4 0 0 ABS 0 sfr4 -
+__Hsfr5 0 0 ABS 0 sfr5 -
+__Hsfr6 0 0 ABS 0 sfr6 -
+__Hsfr7 0 0 ABS 0 sfr7 -
+__Hsfr8 0 0 ABS 0 sfr8 -
+__Hsfr9 0 0 ABS 0 sfr9 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit A4 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsfr4 0 0 ABS 0 sfr4 -
+__Lsfr5 0 0 ABS 0 sfr5 -
+__Lsfr6 0 0 ABS 0 sfr6 -
+__Lsfr7 0 0 ABS 0 sfr7 -
+__Lsfr8 0 0 ABS 0 sfr8 -
+__Lsfr9 0 0 ABS 0 sfr9 -
+__Ltext 0 0 ABS 0 text -
+__H_time01_text 0 0 ABS 0 _time01_text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+int$flags 7E 0 ABS 0 - main.o
+__H_time02_text 0 0 ABS 0 _time02_text -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__S0 900 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__H_time03_text 0 0 ABS 0 _time03_text -
+_gate_state 40 0 BANK0 1 bssBANK0 main.o
+__size_of_reset_envelope 0 0 ABS 0 - main.o
+__H_time04_text 0 0 ABS 0 _time04_text -
+_attack 3C 0 BANK0 1 bssBANK0 main.o
+__H_time05_text 0 0 ABS 0 _time05_text -
+load_dac@val 4B 0 BANK0 1 cstackBANK0 main.o
+_time09_absaddr 890 0 ABS 0 - main.o
+__H_time06_text 0 0 ABS 0 _time06_text -
+__H_time07_text 0 0 ABS 0 _time07_text -
+__H_time08_text 0 0 ABS 0 _time08_text -
+_SYSTEM_Initialize 0 0 ABS 0 - main.o
+__H_time09_text 0 0 ABS 0 _time09_text -
+__Lintentry 4 0 CODE 0 intentry -
+_env_level 28 0 BANK0 1 bssBANK0 main.o
+reset_vec 0 0 CODE 0 reset_vec startup.o
+_env_mode 44 0 BANK0 1 bssBANK0 main.o
+_env_state 42 0 BANK0 1 bssBANK0 main.o
+__pdataBANK0 5E 0 BANK0 1 dataBANK0 main.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+i1_load_dac 78C 0 CODE 0 text7 main.o
+_PIE1bits 91 0 ABS 0 - main.o
+_time07_absaddr 870 0 ABS 0 - main.o
+?_time_lookup 51 0 BANK0 1 cstackBANK0 main.o
+_my_isr 4 0 CODE 0 intentry main.o
+__Lbank10 0 0 BANK10 1 bank10 -
+__Lbank11 0 0 BANK11 1 bank11 -
+__Lbank12 0 0 BANK12 1 bank12 -
+__Lbank13 0 0 BANK13 1 bank13 -
+__Lbank14 0 0 BANK14 1 bank14 -
+__Lbank15 0 0 BANK15 1 bank15 -
+__Lbank16 0 0 BANK16 1 bank16 -
+__Lbank17 0 0 BANK17 1 bank17 -
+__Lbank18 0 0 BANK18 1 bank18 -
+__Lbank19 0 0 BANK19 1 bank19 -
+__Lbank20 0 0 BANK20 1 bank20 -
+__Lbank21 0 0 BANK21 1 bank21 -
+__Lbank22 0 0 BANK22 1 bank22 -
+__Lbank23 0 0 BANK23 1 bank23 -
+__Lbank24 0 0 BANK24 1 bank24 -
+__Lbank25 0 0 BANK25 1 bank25 -
+__Lbank26 0 0 BANK26 1 bank26 -
+__Lbank27 0 0 BANK27 1 bank27 -
+__Lbank28 0 0 BANK28 1 bank28 -
+__Lbank29 0 0 BANK29 1 bank29 -
+__Lbank30 0 0 BANK30 1 bank30 -
+__Lbank31 0 0 BANK31 1 bank31 -
+__pmaintext 8CE 0 CODE 0 maintext main.o
+__Lbigram 0 0 ABS 0 bigram -
+__Lcommon 0 0 ABS 0 common -
+__Hinittext 0 0 ABS 0 inittext -
+__size_of_time_lookup 0 0 ABS 0 - main.o
+_time00 11E0 0 STRCODE 0 _time00_text main.o
+_time01 11C0 0 STRCODE 0 _time01_text main.o
+_time02 11A0 0 STRCODE 0 _time02_text main.o
+_time03 1180 0 STRCODE 0 _time03_text main.o
+_time04 1160 0 STRCODE 0 _time04_text main.o
+_time05 1140 0 STRCODE 0 _time05_text main.o
+_time06 1120 0 STRCODE 0 _time06_text main.o
+_time07 1100 0 STRCODE 0 _time07_text main.o
+_time08 10E0 0 STRCODE 0 _time08_text main.o
+_time09 10C0 0 STRCODE 0 _time09_text main.o
+_time10 10A0 0 STRCODE 0 _time10_text main.o
+_time11 1080 0 STRCODE 0 _time11_text main.o
+_time12 1060 0 STRCODE 0 _time12_text main.o
+_time13 1040 0 STRCODE 0 _time13_text main.o
+_time14 1020 0 STRCODE 0 _time14_text main.o
+_time15 1000 0 STRCODE 0 _time15_text main.o
+__size_of_flash_read 0 0 ABS 0 - main.o
+_ADCON0bits 9D 0 ABS 0 - main.o
+_time05_absaddr 850 0 ABS 0 - main.o
+_adc_vals 20 0 BANK0 1 bssBANK0 main.o
+__L_time00_text 0 0 ABS 0 _time00_text -
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+_time15_absaddr 8F0 0 ABS 0 - main.o
+i1load_dac@val 70 0 COMMON 1 cstackCOMMON main.o
+__L_time01_text 0 0 ABS 0 _time01_text -
+?_flash_read 4B 0 BANK0 1 cstackBANK0 main.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__size_of_my_isr 0 0 ABS 0 - main.o
+__end_ofi1_load_dac 7BC 0 CODE 0 text7 main.o
+_PIR1bits 11 0 ABS 0 - main.o
+__Lend_init A4 0 CODE 0 end_init -
+__L_time02_text 0 0 ABS 0 _time02_text -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__L_time03_text 0 0 ABS 0 _time03_text -
+end_of_initialization FF8 0 CODE 0 cinit main.o
+__Hintentry A4 0 CODE 0 intentry -
+__L_time04_text 0 0 ABS 0 _time04_text -
+i1load_dac@dac_bits 78 0 COMMON 1 cstackCOMMON main.o
+__Lstrings 0 0 ABS 0 strings -
+__L_time05_text 0 0 ABS 0 _time05_text -
+__Hreset_vec 4 0 CODE 0 reset_vec -
+__L_time06_text 0 0 ABS 0 _time06_text -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__H_time10_text 0 0 ABS 0 _time10_text -
+__L_time07_text 0 0 ABS 0 _time07_text -
+__H_time11_text 0 0 ABS 0 _time11_text -
+__L_time08_text 0 0 ABS 0 _time08_text -
+__ptext1 86E 0 CODE 0 text1 main.o
+__ptext2 82C 0 CODE 0 text2 main.o
+__ptext3 76C 0 CODE 0 text3 main.o
+__ptext4 7EC 0 CODE 0 text4 main.o
+__ptext5 7BC 0 CODE 0 text5 main.o
+__ptext7 78C 0 CODE 0 text7 main.o
+__ptext8 BF6 0 CODE 0 text8 main.o
+__H_time12_text 0 0 ABS 0 _time12_text -
+_time03_absaddr 830 0 ABS 0 - main.o
+__L_time09_text 0 0 ABS 0 _time09_text -
+__H_time13_text 0 0 ABS 0 _time13_text -
+_time13_absaddr 8D0 0 ABS 0 - main.o
+__H_time14_text 0 0 ABS 0 _time14_text -
+_adc_chans 5E 0 BANK0 1 dataBANK0 main.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__H_time15_text 0 0 ABS 0 _time15_text -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+_sustain 34 0 BANK0 1 bssBANK0 main.o
+__end_of__initialization FF8 0 CODE 0 cinit main.o
+__size_of_spi_init 0 0 ABS 0 - main.o
+__Lfunctab 0 0 ENTRY 0 functab -
+load_dac@chan 52 0 BANK0 1 cstackBANK0 main.o
+_NVMCON1bits 895 0 ABS 0 - main.o
+__pidataBANK0 75C 0 CODE 0 idataBANK0 main.o
+__Lclrtext 0 0 ABS 0 clrtext -
+__p_time00_text 11E0 0 STRCODE 0 _time00_text main.o
+__p_time01_text 11C0 0 STRCODE 0 _time01_text main.o
+_time01_absaddr 810 0 ABS 0 - main.o
+main@chan_sel 5D 0 BANK0 1 cstackBANK0 main.o
+__p_time02_text 11A0 0 STRCODE 0 _time02_text main.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON main.o
+_time11_absaddr 8B0 0 ABS 0 - main.o
+__p_time03_text 1180 0 STRCODE 0 _time03_text main.o
+_SSP1BUF 211 0 ABS 0 - main.o
+envelope_control@chan 7D 0 COMMON 1 cstackCOMMON main.o
+envelope_control@gate 70 0 COMMON 1 cstackCOMMON main.o
+__Hend_init AA 0 CODE 0 end_init -
+__p_time04_text 1160 0 STRCODE 0 _time04_text main.o
+load_dac@dac_bits 53 0 BANK0 1 cstackBANK0 main.o
+__end_of_main BF6 0 CODE 0 maintext main.o
+__p_time05_text 1140 0 STRCODE 0 _time05_text main.o
+_EEADR 891 0 ABS 0 - main.o
+_EEDAT 893 0 ABS 0 - main.o
+__p_time06_text 1120 0 STRCODE 0 _time06_text main.o
+_PORTA C 0 ABS 0 - main.o
+_PORTB D 0 ABS 0 - main.o
+_PORTC E 0 ABS 0 - main.o
+_T2CON 1F 0 ABS 0 - main.o
+_TRISA 8C 0 ABS 0 - main.o
+_TRISB 8D 0 ABS 0 - main.o
+_TRISC 8E 0 ABS 0 - main.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_decay 38 0 BANK0 1 bssBANK0 main.o
+__p_time07_text 1100 0 STRCODE 0 _time07_text main.o
+__p_time08_text 10E0 0 STRCODE 0 _time08_text main.o
+_SSPSTATbits 214 0 ABS 0 - main.o
+__pintentry 4 0 CODE 0 intentry main.o
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__p_time09_text 10C0 0 STRCODE 0 _time09_text main.o
+_reset_envelope 7EC 0 CODE 0 text4 main.o
+__initialization FD0 0 CODE 0 cinit main.o
+__pbssBANK0 20 0 BANK0 1 bssBANK0 main.o
+_spi_init 76C 0 CODE 0 text3 main.o
+_time_lookup 86E 0 CODE 0 text1 main.o
+__end_of_spi_init 78C 0 CODE 0 text3 main.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7E8 FD0 18 2
+text1 0 437 86E 30 2
+text2 0 416 82C 21 2
+text3 0 3B6 76C 10 2
+text4 0 3F6 7EC 20 2
+text5 0 3DE 7BC 18 2
+text7 0 3C6 78C 18 2
+text8 0 5FB BF6 1ED 2
+maintext 0 467 8CE 194 2
+cstackCOMMON 1 70 70 E 1
+inittext 0 3A8 750 6 2
+reset_vec 0 0 0 55 2
+bssBANK0 1 20 20 46 1
+_time15_text 0 800 1000 100 2
+idataBANK0 0 3AE 75C 8 2
+clrtext 0 3A2 744 6 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
