@@ -405,11 +405,11 @@ channel_FVR 63
 {
 [v time_lookup@val val `uc  1 a 1 wreg ]
 "364
-[v time_lookup@temp temp `uc  1 a 1 13 ]
+[v time_lookup@temp temp `uc  1 a 1 14 ]
 "363
 [v time_lookup@val val `uc  1 a 1 wreg ]
 "365
-[v time_lookup@val val `uc  1 a 1 14 ]
+[v time_lookup@val val `uc  1 a 1 13 ]
 "368
 } 0
 "58 /Users/marcodellav/MPLABXProjects/PIC16F18344.X/mcc_generated_files/memory.c

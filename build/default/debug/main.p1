@@ -14,10 +14,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2431
 [; ;/Applications/microchip/mplabx/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8/pic/include/proc/pic16f18344.h: 2431: extern volatile LATBbits_t LATBbits __attribute__((address(0x10D)));
 [v _LATBbits `VS122 ~T0 @X0 0 e@269 ]
-"85 main.c
-[; ;main.c: 85: void load_dac(unsigned char chan, unsigned int val);
-[v _load_dac `(v ~T0 @X0 0 ef2`uc`ui ]
-"2168 /Applications/microchip/mplabx/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8/pic/include/proc/pic16f18344.h
+"2168
 [; ;/Applications/microchip/mplabx/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8/pic/include/proc/pic16f18344.h: 2168:     struct {
 [s S111 :1 `uc 1 :1 `uc 1 :6 `uc 1 ]
 [n S111 . ADON GO_nDONE CHS ]
@@ -120,10 +117,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4936
 [; ;/Applications/microchip/mplabx/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8/pic/include/proc/pic16f18344.h: 4936: extern volatile unsigned char SSP1STAT __attribute__((address(0x214)));
 [v _SSP1STAT `Vuc ~T0 @X0 0 e@532 ]
-[v F177 `(v ~T0 @X0 1 tf1`ul ]
-"12 /Applications/microchip/mplabx/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8/pic/include/builtins.h
-[v __delay `JF177 ~T0 @X0 0 e ]
-[p i __delay ]
+"4947
+[; ;/Applications/microchip/mplabx/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8/pic/include/proc/pic16f18344.h: 4947:     struct {
+[s S242 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S242 . BF UA R_nW S P D_nA CKE SMP ]
+"4946
+[; ;/Applications/microchip/mplabx/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8/pic/include/proc/pic16f18344.h: 4946: typedef union {
+[u S241 `S242 1 ]
+[n S241 . . ]
+"4958
+[; ;/Applications/microchip/mplabx/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8/pic/include/proc/pic16f18344.h: 4958: extern volatile SSP1STATbits_t SSP1STATbits __attribute__((address(0x214)));
+[v _SSP1STATbits `VS241 ~T0 @X0 0 e@532 ]
 "99 ./mcc_generated_files/memory.h
 [; ;./mcc_generated_files/memory.h: 99: uint16_t FLASH_ReadWord(uint16_t flashAddr);
 [v _FLASH_ReadWord `(us ~T0 @X0 0 ef1`us ]
@@ -1575,12 +1579,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "102
 [; ;main.c: 102:     LATBbits.LATB7 = 0x01;
 [e = . . _LATBbits 0 4 -> -> 1 `i `uc ]
-"105
-[; ;main.c: 105:  load_dac(0, 0);
-[e ( _load_dac (2 , -> -> 0 `i `uc -> -> 0 `i `ui ]
-"106
-[; ;main.c: 106:  load_dac(1, 0);
-[e ( _load_dac (2 , -> -> 1 `i `uc -> -> 0 `i `ui ]
 "109
 [; ;main.c: 109:     ADCON0bits.ADON = 1;
 [e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
@@ -1652,8 +1650,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 173:     adc_vals[chan_sel] = ADC_GetConversion(ADCON0bits.CHS);
 [e = *U + &U _adc_vals * -> _chan_sel `ux -> -> # *U &U _adc_vals `ui `ux -> ( _ADC_GetConversion (1 -> . . _ADCON0bits 0 2 `E6855 `uc ]
 "176
-[; ;main.c: 176:     chan_sel = (chan_sel + 1) & 0x07;
-[e = _chan_sel -> & + -> _chan_sel `i -> 1 `i -> 7 `i `uc ]
+[; ;main.c: 176:     chan_sel = (chan_sel + 1) & 0x03;
+[e = _chan_sel -> & + -> _chan_sel `i -> 1 `i -> 3 `i `uc ]
 "177
 [; ;main.c: 177:     ADCON0bits.CHS = adc_chans[chan_sel];
 [e = . . _ADCON0bits 0 2 *U + &U _adc_chans * -> _chan_sel `ux -> -> # *U &U _adc_chans `ui `ux ]
@@ -1773,280 +1771,297 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _Timer2ISR ]
 [f ]
-"230
-[; ;main.c: 230:     envelope_control(0, PORTAbits.RA5);
+"225
+[; ;main.c: 225:     envelope_control(0, PORTAbits.RA5);
 [e ( _envelope_control (2 , -> -> 0 `i `uc . . _PORTAbits 0 5 ]
-"233
-[; ;main.c: 233:     load_dac(0, (env_level[0] >> 4));
-[e ( _load_dac (2 , -> -> 0 `i `uc -> >> *U + &U _env_level * -> -> -> 0 `i `ui `ux -> -> # *U &U _env_level `ui `ux -> 4 `i `ui ]
-"238
-[; ;main.c: 238: }
+"230
+[; ;main.c: 230: }
 [e :UE 946 ]
 }
-"241
-[; ;main.c: 241: void load_dac(unsigned char chan, unsigned int val) {
+"233
+[; ;main.c: 233: void load_dac(unsigned char chan, unsigned int val) {
 [v _load_dac `(v ~T0 @X0 1 ef2`uc`ui ]
 {
 [e :U _load_dac ]
 [v _chan `uc ~T0 @X0 1 r1 ]
 [v _val `ui ~T0 @X0 1 r2 ]
 [f ]
-"244
-[; ;main.c: 244:     unsigned char dac_bits;
+"236
+[; ;main.c: 236:     unsigned char dac_bits;
 [v _dac_bits `uc ~T0 @X0 1 a ]
-"245
-[; ;main.c: 245:     unsigned char temp_h;
+"237
+[; ;main.c: 237:     unsigned char temp_h;
 [v _temp_h `uc ~T0 @X0 1 a ]
-"246
-[; ;main.c: 246:     unsigned char temp_l;
+"238
+[; ;main.c: 238:     unsigned char temp_l;
 [v _temp_l `uc ~T0 @X0 1 a ]
-"247
-[; ;main.c: 247:     unsigned char read_buf;
+"239
+[; ;main.c: 239:     unsigned char read_buf;
 [v _read_buf `uc ~T0 @X0 1 a ]
-"249
-[; ;main.c: 249:     temp_h = val >> 8;
+"241
+[; ;main.c: 241:     temp_h = val >> 8;
 [e = _temp_h -> >> _val -> 8 `i `uc ]
-"250
-[; ;main.c: 250:     temp_l = val;
+"242
+[; ;main.c: 242:     temp_l = val;
 [e = _temp_l -> _val `uc ]
-"252
-[; ;main.c: 252:     TRISBbits.TRISB6 = 0;
+"244
+[; ;main.c: 244:     TRISBbits.TRISB6 = 0;
 [e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
-"253
-[; ;main.c: 253:     TRISCbits.TRISC7 = 0;
+"245
+[; ;main.c: 245:     TRISCbits.TRISC7 = 0;
 [e = . . _TRISCbits 0 7 -> -> 0 `i `uc ]
-"257
-[; ;main.c: 257:     if(chan) dac_bits = 0b10010000;
+"249
+[; ;main.c: 249:     if(chan) dac_bits = 0b10010000;
 [e $ ! != -> _chan `i -> 0 `i 948  ]
 [e = _dac_bits -> -> 144 `i `uc ]
 [e $U 949  ]
-"258
-[; ;main.c: 258:     else dac_bits = 0b00010000;
+"250
+[; ;main.c: 250:     else dac_bits = 0b00010000;
 [e :U 948 ]
 [e = _dac_bits -> -> 16 `i `uc ]
 [e :U 949 ]
-"261
-[; ;main.c: 261:     read_buf = SSP1BUF;
+"253
+[; ;main.c: 253:     read_buf = SSP1BUF;
 [e = _read_buf _SSP1BUF ]
-"263
-[; ;main.c: 263:     SSP1CON1 = 0x20;
+"255
+[; ;main.c: 255:     SSP1CON1 = 0x20;
 [e = _SSP1CON1 -> -> 32 `i `uc ]
-"264
-[; ;main.c: 264:     SSP1STAT = 0x40;
+"256
+[; ;main.c: 256:     SSP1STAT = 0x40;
 [e = _SSP1STAT -> -> 64 `i `uc ]
-"265
-[; ;main.c: 265:     LATBbits.LATB7 = 0;
+"257
+[; ;main.c: 257:     LATBbits.LATB7 = 0;
 [e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
-"268
-[; ;main.c: 268:     SSP1BUF = dac_bits | temp_h;
+"260
+[; ;main.c: 260:     SSP1BUF = dac_bits | temp_h;
 [e = _SSP1BUF -> | -> _dac_bits `i -> _temp_h `i `uc ]
-"274
-[; ;main.c: 274:     SSP1BUF = temp_l;
+"262
+[; ;main.c: 262:     while (!SSP1STATbits.BF);
+[e $U 950  ]
+[e :U 951 ]
+[e :U 950 ]
+[e $ ! != -> . . _SSP1STATbits 0 0 `i -> 0 `i 951  ]
+[e :U 952 ]
+"266
+[; ;main.c: 266:     SSP1BUF = temp_l;
 [e = _SSP1BUF _temp_l ]
-"278
-[; ;main.c: 278:     LATBbits.LATB7 = 1;
+"267
+[; ;main.c: 267:     while (!SSP1STATbits.BF);
+[e $U 953  ]
+[e :U 954 ]
+[e :U 953 ]
+[e $ ! != -> . . _SSP1STATbits 0 0 `i -> 0 `i 954  ]
+[e :U 955 ]
+"270
+[; ;main.c: 270:     LATBbits.LATB7 = 1;
 [e = . . _LATBbits 0 4 -> -> 1 `i `uc ]
-"279
-[; ;main.c: 279: }
+"271
+[; ;main.c: 271: }
 [e :UE 947 ]
 }
-"282
-[; ;main.c: 282: void reset_envelope(unsigned char chan) {
+"274
+[; ;main.c: 274: void reset_envelope(unsigned char chan) {
 [v _reset_envelope `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _reset_envelope ]
 [v _chan `uc ~T0 @X0 1 r1 ]
 [f ]
-"283
-[; ;main.c: 283:  if(chan > 1) return;
-[e $ ! > -> _chan `i -> 1 `i 951  ]
-[e $UE 950  ]
-[e :U 951 ]
-"284
-[; ;main.c: 284:  env_state[chan] = 0;
+"275
+[; ;main.c: 275:  if(chan > 1) return;
+[e $ ! > -> _chan `i -> 1 `i 957  ]
+[e $UE 956  ]
+[e :U 957 ]
+"276
+[; ;main.c: 276:  env_state[chan] = 0;
 [e = *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux -> -> 0 `i `uc ]
-"285
-[; ;main.c: 285:  env_level[chan] = 0;
+"277
+[; ;main.c: 277:  env_level[chan] = 0;
 [e = *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> -> 0 `i `l ]
-"286
-[; ;main.c: 286: }
-[e :UE 950 ]
+"278
+[; ;main.c: 278: }
+[e :UE 956 ]
 }
-"290
-[; ;main.c: 290: void envelope_control(unsigned char chan, unsigned char gate) {
+"282
+[; ;main.c: 282: void envelope_control(unsigned char chan, unsigned char gate) {
 [v _envelope_control `(v ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _envelope_control ]
 [v _chan `uc ~T0 @X0 1 r1 ]
 [v _gate `uc ~T0 @X0 1 r2 ]
 [f ]
+"284
+[; ;main.c: 284:  if(chan > 1) return;
+[e $ ! > -> _chan `i -> 1 `i 959  ]
+[e $UE 958  ]
+[e $U 960  ]
+"290
+[; ;main.c: 290:  else {
+[e :U 959 ]
+{
 "292
-[; ;main.c: 292:  if(chan > 1) return;
-[e $ ! > -> _chan `i -> 1 `i 953  ]
-[e $UE 952  ]
-[e $U 954  ]
-"298
-[; ;main.c: 298:  else {
-[e :U 953 ]
+[; ;main.c: 292:   if(gate == 0 && gate_state[chan] == 0) {
+[e $ ! && == -> _gate `i -> 0 `i == -> *U + &U _gate_state * -> _chan `ux -> -> # *U &U _gate_state `ui `ux `i -> 0 `i 961  ]
 {
-"300
-[; ;main.c: 300:   if(gate == 0 && gate_state[chan] == 0) {
-[e $ ! && == -> _gate `i -> 0 `i == -> *U + &U _gate_state * -> _chan `ux -> -> # *U &U _gate_state `ui `ux `i -> 0 `i 955  ]
-{
-"301
-[; ;main.c: 301:    gate_state[chan] = 1;
+"293
+[; ;main.c: 293:    gate_state[chan] = 1;
 [e = *U + &U _gate_state * -> _chan `ux -> -> # *U &U _gate_state `ui `ux -> -> 1 `i `uc ]
-"302
-[; ;main.c: 302:    env_state[chan] = 1;
+"294
+[; ;main.c: 294:    env_state[chan] = 1;
 [e = *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux -> -> 1 `i `uc ]
-"304
-[; ;main.c: 304:   }
+"296
+[; ;main.c: 296:   }
 }
-[e :U 955 ]
-"306
-[; ;main.c: 306:   if(gate == 1 && gate_state[chan] == 1) {
-[e $ ! && == -> _gate `i -> 1 `i == -> *U + &U _gate_state * -> _chan `ux -> -> # *U &U _gate_state `ui `ux `i -> 1 `i 956  ]
+[e :U 961 ]
+"298
+[; ;main.c: 298:   if(gate == 1 && gate_state[chan] == 1) {
+[e $ ! && == -> _gate `i -> 1 `i == -> *U + &U _gate_state * -> _chan `ux -> -> # *U &U _gate_state `ui `ux `i -> 1 `i 962  ]
 {
-"307
-[; ;main.c: 307:    gate_state[chan] = 0;
+"299
+[; ;main.c: 299:    gate_state[chan] = 0;
 [e = *U + &U _gate_state * -> _chan `ux -> -> # *U &U _gate_state `ui `ux -> -> 0 `i `uc ]
-"309
-[; ;main.c: 309:    env_state[chan] = 4;
+"301
+[; ;main.c: 301:    env_state[chan] = 4;
 [e = *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux -> -> 4 `i `uc ]
+"303
+[; ;main.c: 303:   }
+}
+[e :U 962 ]
+"304
+[; ;main.c: 304:  }
+}
+[e :U 960 ]
+"310
+[; ;main.c: 310:  if(env_state[chan] == 1) {
+[e $ ! == -> *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux `i -> 1 `i 963  ]
+{
 "311
-[; ;main.c: 311:   }
-}
-[e :U 956 ]
-"314
-[; ;main.c: 314:  }
-}
-[e :U 954 ]
-"320
-[; ;main.c: 320:  if(env_state[chan] == 1) {
-[e $ ! == -> *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux `i -> 1 `i 957  ]
-{
-"321
-[; ;main.c: 321:   env_level[chan] += attack[chan];
+[; ;main.c: 311:   env_level[chan] += attack[chan];
 [e =+ *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _attack * -> _chan `ux -> -> # *U &U _attack `ui `ux `l ]
-"323
-[; ;main.c: 323:   if(env_level[chan] > 65535) {
-[e $ ! > *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> 65535 `l 958  ]
+"313
+[; ;main.c: 313:   if(env_level[chan] > 65535) {
+[e $ ! > *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> 65535 `l 964  ]
 {
-"324
-[; ;main.c: 324:    env_level[chan] = 65535;
+"314
+[; ;main.c: 314:    env_level[chan] = 65535;
 [e = *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> 65535 `l ]
-"325
-[; ;main.c: 325:    env_state[chan] = 2;
+"315
+[; ;main.c: 315:    env_state[chan] = 2;
 [e = *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux -> -> 2 `i `uc ]
-"326
-[; ;main.c: 326:    }
+"316
+[; ;main.c: 316:    }
 }
-[e :U 958 ]
+[e :U 964 ]
+"317
+[; ;main.c: 317:          return;
+[e $UE 958  ]
+"318
+[; ;main.c: 318:   }
+}
+[e :U 963 ]
+"322
+[; ;main.c: 322:  if(env_state[chan] == 2) {
+[e $ ! == -> *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux `i -> 2 `i 965  ]
+{
+"323
+[; ;main.c: 323:   env_level[chan] -= decay[chan];
+[e =- *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _decay * -> _chan `ux -> -> # *U &U _decay `ui `ux `l ]
+"325
+[; ;main.c: 325:   if(env_level[chan] < sustain[chan]) {
+[e $ ! < *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _sustain * -> _chan `ux -> -> # *U &U _sustain `ui `ux `l 966  ]
+{
+"326
+[; ;main.c: 326:    env_level[chan] = sustain[chan];
+[e = *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _sustain * -> _chan `ux -> -> # *U &U _sustain `ui `ux `l ]
 "327
-[; ;main.c: 327:          return;
-[e $UE 952  ]
+[; ;main.c: 327:    env_state[chan] = 3;
+[e = *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux -> -> 3 `i `uc ]
 "328
 [; ;main.c: 328:   }
 }
-[e :U 957 ]
+[e :U 966 ]
+"329
+[; ;main.c: 329:   return;
+[e $UE 958  ]
+"330
+[; ;main.c: 330:  }
+}
+[e :U 965 ]
 "332
-[; ;main.c: 332:  if(env_state[chan] == 2) {
-[e $ ! == -> *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux `i -> 2 `i 959  ]
+[; ;main.c: 332:  if(env_state[chan] == 3) {
+[e $ ! == -> *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux `i -> 3 `i 967  ]
 {
-"333
-[; ;main.c: 333:   env_level[chan] -= decay[chan];
-[e =- *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _decay * -> _chan `ux -> -> # *U &U _decay `ui `ux `l ]
+"334
+[; ;main.c: 334:   env_level[chan] = sustain[chan];
+[e = *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _sustain * -> _chan `ux -> -> # *U &U _sustain `ui `ux `l ]
 "335
-[; ;main.c: 335:   if(env_level[chan] < sustain[chan]) {
-[e $ ! < *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _sustain * -> _chan `ux -> -> # *U &U _sustain `ui `ux `l 960  ]
-{
+[; ;main.c: 335:   return;
+[e $UE 958  ]
 "336
-[; ;main.c: 336:    env_level[chan] = sustain[chan];
-[e = *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _sustain * -> _chan `ux -> -> # *U &U _sustain `ui `ux `l ]
-"337
-[; ;main.c: 337:    env_state[chan] = 3;
-[e = *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux -> -> 3 `i `uc ]
+[; ;main.c: 336:  }
+}
+[e :U 967 ]
 "338
-[; ;main.c: 338:   }
-}
-[e :U 960 ]
+[; ;main.c: 338:  if(env_state[chan] == 4) {
+[e $ ! == -> *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux `i -> 4 `i 968  ]
+{
 "339
-[; ;main.c: 339:   return;
-[e $UE 952  ]
-"340
-[; ;main.c: 340:  }
-}
-[e :U 959 ]
-"342
-[; ;main.c: 342:  if(env_state[chan] == 3) {
-[e $ ! == -> *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux `i -> 3 `i 961  ]
-{
-"344
-[; ;main.c: 344:   env_level[chan] = sustain[chan];
-[e = *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _sustain * -> _chan `ux -> -> # *U &U _sustain `ui `ux `l ]
-"345
-[; ;main.c: 345:   return;
-[e $UE 952  ]
-"346
-[; ;main.c: 346:  }
-}
-[e :U 961 ]
-"348
-[; ;main.c: 348:  if(env_state[chan] == 4) {
-[e $ ! == -> *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux `i -> 4 `i 962  ]
-{
-"349
-[; ;main.c: 349:   env_level[chan] -= release[chan];
+[; ;main.c: 339:   env_level[chan] -= release[chan];
 [e =- *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> *U + &U _release * -> _chan `ux -> -> # *U &U _release `ui `ux `l ]
-"351
-[; ;main.c: 351:         _delay((unsigned long)((400)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 400 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"353
-[; ;main.c: 353:   if(env_level[chan] < 0) {
-[e $ ! < *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> -> 0 `i `l 963  ]
+"342
+[; ;main.c: 342:   if(env_level[chan] < 0) {
+[e $ ! < *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> -> 0 `i `l 969  ]
 {
-"354
-[; ;main.c: 354:    env_level[chan] = 0;
+"343
+[; ;main.c: 343:    env_level[chan] = 0;
 [e = *U + &U _env_level * -> _chan `ux -> -> # *U &U _env_level `ui `ux -> -> 0 `i `l ]
-"355
-[; ;main.c: 355:    env_state[chan] = 0;
+"344
+[; ;main.c: 344:    env_state[chan] = 0;
 [e = *U + &U _env_state * -> _chan `ux -> -> # *U &U _env_state `ui `ux -> -> 0 `i `uc ]
-"356
-[; ;main.c: 356:   }
+"345
+[; ;main.c: 345:   }
 }
-[e :U 963 ]
-"357
-[; ;main.c: 357:   return;
-[e $UE 952  ]
-"358
-[; ;main.c: 358:  }
+[e :U 969 ]
+"346
+[; ;main.c: 346:   return;
+[e $UE 958  ]
+"347
+[; ;main.c: 347:  }
 }
-[e :U 962 ]
-"360
-[; ;main.c: 360: }
-[e :UE 952 ]
+[e :U 968 ]
+"349
+[; ;main.c: 349: }
+[e :UE 958 ]
 }
-"363
-[; ;main.c: 363: unsigned int time_lookup(unsigned char val) {
+"352
+[; ;main.c: 352: unsigned int time_lookup(unsigned char val) {
 [v _time_lookup `(ui ~T0 @X0 1 ef1`uc ]
 {
 [e :U _time_lookup ]
 [v _val `uc ~T0 @X0 1 r1 ]
 [f ]
-"364
-[; ;main.c: 364:  unsigned char temp;
+"353
+[; ;main.c: 353:  unsigned char temp;
 [v _temp `uc ~T0 @X0 1 a ]
-"365
-[; ;main.c: 365:  temp = FLASH_ReadWord(0x0800 + (val << 1));
+"354
+[; ;main.c: 354:     unsigned char temp2;
+[v _temp2 `uc ~T0 @X0 1 a ]
+"355
+[; ;main.c: 355:     unsigned char temp3;
+[v _temp3 `uc ~T0 @X0 1 a ]
+"358
+[; ;main.c: 358:  temp = FLASH_ReadWord(0x0800 + (val << 1));
 [e = _temp -> ( _FLASH_ReadWord (1 -> + -> 2048 `i << -> _val `i -> 1 `i `us `uc ]
-"366
-[; ;main.c: 366:     temp |= FLASH_ReadWord(0x0801 + (val << 1)) << 8;
-[e =| _temp -> << -> ( _FLASH_ReadWord (1 -> + -> 2049 `i << -> _val `i -> 1 `i `us `ui -> 8 `i `uc ]
-"367
-[; ;main.c: 367:  return temp;
+"360
+[; ;main.c: 360:     temp2 = FLASH_ReadWord(0x0801 + (val << 1)) << 8;
+[e = _temp2 -> << -> ( _FLASH_ReadWord (1 -> + -> 2049 `i << -> _val `i -> 1 `i `us `ui -> 8 `i `uc ]
+"361
+[; ;main.c: 361:     temp3 = temp | temp2;
+[e = _temp3 -> | -> _temp `i -> _temp2 `i `uc ]
+"363
+[; ;main.c: 363:  return temp;
 [e ) -> _temp `ui ]
-[e $UE 964  ]
-"368
-[; ;main.c: 368: }
-[e :UE 964 ]
+[e $UE 970  ]
+"364
+[; ;main.c: 364: }
+[e :UE 970 ]
 }

@@ -11336,8 +11336,8 @@ void main(void)
     LATBbits.LATB7 = 0x01;
 
 
- load_dac(0, 0);
- load_dac(1, 0);
+
+
 
 
     ADCON0bits.ADON = 1;
@@ -11386,7 +11386,7 @@ void main(void)
     adc_vals[chan_sel] = ADC_GetConversion(ADCON0bits.CHS);
 
 
-    chan_sel = (chan_sel + 1) & 0x07;
+    chan_sel = (chan_sel + 1) & 0x03;
     ADCON0bits.CHS = adc_chans[chan_sel];
 
     (INTCONbits.GIE = 1);
@@ -11435,15 +11435,7 @@ void main(void)
 void Timer2ISR(void) {
 
 
-
-
-
-
-
     envelope_control(0, PORTAbits.RA5);
-
-
-    load_dac(0, (env_level[0] >> 4));
 
 
 
@@ -11480,12 +11472,12 @@ void load_dac(unsigned char chan, unsigned int val) {
 
     SSP1BUF = dac_bits | temp_h;
 
-
+    while (!SSP1STATbits.BF);
 
 
 
     SSP1BUF = temp_l;
-
+    while (!SSP1STATbits.BF);
 
 
     LATBbits.LATB7 = 1;
@@ -11522,8 +11514,6 @@ void envelope_control(unsigned char chan, unsigned char gate) {
    env_state[chan] = 4;
 
   }
-
-
  }
 
 
@@ -11561,7 +11551,6 @@ void envelope_control(unsigned char chan, unsigned char gate) {
  if(env_state[chan] == 4) {
   env_level[chan] -= release[chan];
 
-        _delay((unsigned long)((400)*(8000000/4000000.0)));
 
   if(env_level[chan] < 0) {
    env_level[chan] = 0;
@@ -11575,7 +11564,14 @@ void envelope_control(unsigned char chan, unsigned char gate) {
 
 unsigned int time_lookup(unsigned char val) {
  unsigned char temp;
+    unsigned char temp2;
+    unsigned char temp3;
+
+
  temp = FLASH_ReadWord(0x0800 + (val << 1));
-    temp |= FLASH_ReadWord(0x0801 + (val << 1)) << 8;
+
+    temp2 = FLASH_ReadWord(0x0801 + (val << 1)) << 8;
+    temp3 = temp | temp2;
+
  return temp;
 }

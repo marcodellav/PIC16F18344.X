@@ -11386,7 +11386,7 @@ void main(void)
     adc_vals[chan_sel] = ADC_GetConversion(ADCON0bits.CHS);
 
 
-    chan_sel = (chan_sel + 1) & 0x07;
+    chan_sel = (chan_sel + 1) & 0x03;
     ADCON0bits.CHS = adc_chans[chan_sel];
 
     (INTCONbits.GIE = 1);
@@ -11559,9 +11559,9 @@ void envelope_control(unsigned char chan, unsigned char gate) {
  }
 
  if(env_state[chan] == 4) {
-  env_level[chan] -= release[chan];
+  env_level[chan] -= (release[chan] - 50);
 
-        _delay((unsigned long)((400)*(8000000/4000000.0)));
+
 
   if(env_level[chan] < 0) {
    env_level[chan] = 0;
@@ -11576,6 +11576,6 @@ void envelope_control(unsigned char chan, unsigned char gate) {
 unsigned int time_lookup(unsigned char val) {
  unsigned char temp;
  temp = FLASH_ReadWord(0x0800 + (val << 1));
-    temp |= FLASH_ReadWord(0x0801 + (val << 1)) << 8;
+
  return temp;
 }

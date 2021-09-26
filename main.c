@@ -102,8 +102,8 @@ void main(void)
     DAC_CS = 0x01; // Setting CS pin to high to disable serial clock and data functions.
 
 	// clear outputs
-	load_dac(0, 0); // chan 0, val 0
-	load_dac(1, 0); // chan 1, val 0
+	// load_dac(0, 0); // chan 0, val 0
+	// load_dac(1, 0); // chan 1, val 0
     
 	// kick off the ADC
     ADCON0bits.ADON = 1;
@@ -173,7 +173,7 @@ void main(void)
     adc_vals[chan_sel] = ADC_GetConversion(ADCON0bits.CHS);
     // __delay_us(400);
  
-    chan_sel = (chan_sel + 1) & 0x07;
+    chan_sel = (chan_sel + 1) & 0x03;
     ADCON0bits.CHS = adc_chans[chan_sel]; 
     
     INTERRUPT_GlobalInterruptEnable(); 
@@ -222,19 +222,11 @@ void main(void)
 void Timer2ISR(void) {
     
 	// timer 2 - 1ms interval
-	
-    // if (PIR1bits.TMR2IF){
-        // PIR1bits.TMR2IF = 0;
-    // TEST_OUT = 1;
-
     envelope_control(0, GATE1_IN);
 
-
-    load_dac(0, (env_level[0] >> 4));
+  //  load_dac(0, (env_level[0] >> 4));
  // load_dac(1, (env_level[1] >> 4));
-    // PIR1bits.TMR2IF = 0;
-    // TEST_OUT = 0;
- 	// }
+    
 }
 
 // send output to DAC
@@ -267,12 +259,12 @@ void load_dac(unsigned char chan, unsigned int val) {
     // bits 15-8
     SSP1BUF = dac_bits | temp_h;
     
-//    while (!SSP1STATbits.BF);
+    while (!SSP1STATbits.BF);
 
     
     // bits 7-0
     SSP1BUF = temp_l;
- //   while (!SSP1STATbits.BF);
+    while (!SSP1STATbits.BF);
     
     
     DAC_CS = 1;
@@ -308,9 +300,7 @@ void envelope_control(unsigned char chan, unsigned char gate) {
 			// only change to release phase for ADSR
 			env_state[chan] = ENV_RELEASE;
             
-		}
-                    
-
+		}             
 	}
 
 	//
@@ -348,7 +338,6 @@ void envelope_control(unsigned char chan, unsigned char gate) {
 	if(env_state[chan] == ENV_RELEASE) {
 		env_level[chan] -= release[chan];
 		// is it time to end the release phase?
-        __delay_us(400);
         
 		if(env_level[chan] < 0) {
 			env_level[chan] = 0;
@@ -362,8 +351,15 @@ void envelope_control(unsigned char chan, unsigned char gate) {
 // look up a time val and return the step size
 unsigned int time_lookup(unsigned char val) {
 	unsigned char temp;
+    unsigned char temp2;
+    unsigned char temp3;
+
+
 	temp = FLASH_ReadWord(0x0800 + (val << 1));
-    temp |= FLASH_ReadWord(0x0801 + (val << 1)) << 8;
+    // temp |= FLASH_ReadWord(0x0801 + (val << 1)) << 8;
+    temp2 = FLASH_ReadWord(0x0801 + (val << 1)) << 8;
+    temp3 = temp | temp2;
+
 	return temp;
 }
 
